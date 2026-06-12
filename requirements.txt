@@ -1,0 +1,18 @@
+# Non-CLI settings: edit bench4hls_config.json (see bench4hls_config.example.json)
+
+# Core — always needed
+pandas>=2.0
+numpy>=1.26
+
+# HuggingFace backend (one of the two below)
+# Option A: unsloth (faster, recommended for large models)
+# unsloth>=2025.1
+#
+# Option B: standard transformers stack
+transformers>=4.51
+accelerate>=0.30
+bitsandbytes>=0.43    # for 4-bit quantization
+torch>=2.0            # install the CUDA wheel for your driver version
+
+# Ollama backend — no extra deps (uses stdlib urllib)
+# Make sure Ollama server is running: https://ollama.com

@@ -1,0 +1,23 @@
+{
+  "model": "gpt-oss:20b",
+  "input_prompts": "benchmark/input_prompts.json",
+  "output_dir": "/path to evaluation_output",
+  "output_json": "output.json",
+  "generation": {
+    "max_new_tokens": 30000,
+    "temperature": 0.8
+  },
+  "huggingface": {
+    "use_4bit": true,
+    "max_seq_length": 8192
+  },
+  "ollama": {
+    "host": "http://localhost:11434",
+    "timeout_seconds": 600
+  },
+  "parallel_workers": 16,
+  "xilinx": {
+    "vitis_bin": "/home/zafir/Vivado_Vitis/2025.2.1/Vitis/bin/unwrapped/lnx64.o/vitis_hls",
+    "vivado_bin": "/home/zafir/Vivado_Vitis/2025.2.1/Vivado/bin/vivado"
+  }
+}
