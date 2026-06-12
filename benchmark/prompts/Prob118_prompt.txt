@@ -1,0 +1,12 @@
+Implement a combinational circuit that realizes the function defined by the following Karnaugh map. The circuit has four single‑bit inputs (a, b, c, d) and one single‑bit output (f). The Karnaugh map is given as follows:
+
+            ab
+       00   01   11   10
+cd
+00     | 0 |  1 |  0 |  1 |
+01     | 1 |  0 |  1 |  0 |
+11     | 0 |  1 |  0 |  1 |
+10     | 1 |  0 |  1 |  0 |
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<1> a, ap_uint<1> b, ap_uint<1> c, ap_uint<1> d, bool &f)

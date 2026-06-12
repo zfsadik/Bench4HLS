@@ -1,0 +1,8 @@
+Implement an in-place, radix-2 Cooley–Tukey FFT on an 8-point complex vector. It accepts two parallel arrays of length 8 one holding the real parts(XR) and one the imaginary parts(XI)and transforms them so that, when the function completes, those same arrays contain the frequency domain samples. The forward DFT uses the negative-exponent convention (twiddle factor e^{-j2*pi*k/N}). There will be no external handshaking: the entire computation is driven by the nested loops inside the function.
+
+Consider the following parameters:
+SIZE = 8         //Size of the vectors
+typedef float DTYPE
+
+The top-level function should have the following prototype:
+void TopModule(DTYPE XR[SIZE], DTYPE XI[SIZE])

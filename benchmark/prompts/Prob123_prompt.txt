@@ -1,0 +1,12 @@
+The game Lemmings involves critters with fairly simple brains. So simple that we are going to model it using a finite state machine. In the Lemmings' 2D world, a Lemming is always walking in one of two directions: left or right. When walking left, walk_left is 1 and walk_right is 0. When walking right, walk_right is 1 and walk_left is 0. The two outputs are always complementary.
+
+The Lemming changes direction when it hits an obstacle:
+- If bumped on the left (bump_left=1), it switches to walking right.
+- If bumped on the right (bump_right=1), it switches to walking left.
+- If bumped on both sides simultaneously (bump_left=1 and bump_right=1), it still switches direction (away from its current direction).
+- If not bumped, it continues in the same direction.
+
+Implement this as a Moore finite state machine with two states (walk left, walk right) and two input signals (bump_left, bump_right). reset is a synchronous active-high reset that resets the Lemming to the walk-left state on the rising clock edge.
+
+The top-level function should have the following prototype:
+void TopModule(bool reset, bool bump_left, bool bump_right, bool & walk_left, bool & walk_right)

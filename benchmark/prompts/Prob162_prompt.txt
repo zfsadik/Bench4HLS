@@ -1,0 +1,7 @@
+Perform an in-place Cholesky decomposition of an N×N symmetric positive-definite matrix A, replacing its storage with the lower-triangular factor L such that A = L·Lᵀ. Internally, it consists of three main phases:
+	1. Take √A₀₀ to form L₀₀, then divide every Aᵢ₀ (i=1…N–1) by L₀₀ so that the first column of L is complete.
+	2. Iterating over each diagonal element, compute the sum of squares of the already-computed Lⱼₖ (k<j). Subtract that from Aⱼⱼ and take the square root to get Lⱼⱼ. For each row i>j, subtract the dot-product of Lᵢ₀…Lᵢⱼ₋₁ with Lⱼ₀…Lⱼⱼ₋₁ from Aᵢⱼ, then divide by Lⱼⱼ to produce Lᵢⱼ.
+	3. All updates overwrite the lower triangle of A with L so that, at the end, the original matrix A has been transformed in place into its Cholesky factor L, satisfying A = L·Lᵀ.
+
+The top-level function should have the following prototype:
+void TopModule(int diagSize, double *matrixA)

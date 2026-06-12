@@ -1,0 +1,25 @@
+Implement a 16‑bit wide, 9‑to‑1 multiplexer. The multiplexer has nine 16‑bit inputs (named a through i), a 4‑bit selector sel and a 16-bit output out. When:
+
+sel = 0, output = a
+sel = 1, output = b
+sel = 2, output = c
+sel = 3, output = d
+sel = 4, output = e
+sel = 5, output = f
+sel = 6, output = g
+sel = 7, output = h
+sel = 8, output = i
+For any other sel value all 16 output bits are set to '1'. 
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<16> a,
+               ap_uint<16> b,
+               ap_uint<16> c,
+               ap_uint<16> d,
+               ap_uint<16> e,
+               ap_uint<16> f,
+               ap_uint<16> g,
+               ap_uint<16> h,
+               ap_uint<16> i,
+               ap_uint<4> sel,
+               ap_uint<16> &out);

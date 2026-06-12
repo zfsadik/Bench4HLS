@@ -1,0 +1,23 @@
+Implement a combinational circuit in HLS that decodes 8‑bit keyboard scancodes for keys 0 through 9. The circuit has one 8‑bit input signal code and two outputs:
+
+	A 4‑bit output (out), which encodes the recognized key number (0 through 9).
+	A 1‑bit output (valid) that is high when one of the ten scancodes is recognized.
+
+The mapping is as follows:
+
+scancode(hex)	Key(out)
+0x45			0
+0x16			1
+0x1e			2
+0x26			3
+0x25			4
+0x2e			5
+0x36			6
+0x3d			7
+0x3e			8
+0x46			9
+
+For any other input, the circuit must output out = 0 and valid = 0.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<8> code, ap_uint<4> &out, bool &valid)

@@ -1,0 +1,14 @@
+Build a 64-bit arithmetic shift register, with synchronous load. The shifter can shift both left and right, and by 1 or 8 bit positions, selected by "amount." Assume the right shit is an arithmetic right shift.
+
+Signals are defined as below:
+  (1) load: On the rising edge of the clock, if load is asserted (active high), the register is loaded with the 64‑bit input (data).
+  (2) ena: Chooses whether to shift. Active high.
+  (3) amount: Chooses which direction and how much to shift.
+      (a) 2'b00: shift left by 1 bit (insert 0 at LSB).
+      (b) 2'b01: shift left by 8 bits.
+      (c) 2'b10: shift right by 1 bit using arithmetic right shift (i.e. replicate the MSB).
+      (d) 2'b11: shift right by 8 bits using arithmetic right shift.
+  (4) q: The contents of the shifter (output).
+
+The top-level function should have the following prototype:
+void TopModule(bool load, bool ena, ap_uint<2> amount, ap_uint<64> data, ap_uint<64> &q)

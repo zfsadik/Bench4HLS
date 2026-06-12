@@ -1,0 +1,16 @@
+Montgomery modular exponentiation is an efficient way to compute (aᵇ mod m) by replacing the costly “mod m” operation in each multiplication with a sequence of additions and shifts, using Montgomery reduction.
+
+Implement a 8-bit(WIDTH) Montgomery modular exponentiation in HLS. For this, Choose a power-of-two base R = 2^WIDTH and compute R_mod = R mod m. Then transform both your base a and the initial value 1 into “Montgomery form” by multiplying each by R_mod modulo m. Then, scan the bits of the exponent b from most significant to least. On every bit:
+	Square the running result via a Montgomery multiply.
+	If the current bit is 1, multiply again by the Montgomery form a. 
+After all bits are processed, perform one final Montgomery multiply by 1 to undo the Montgomery scaling and yield the true aᵇ mod m.
+
+The top-level function should have the following prototype:
+void TopModule(
+    ap_uint<WIDTH> a,
+    ap_uint<WIDTH> b,
+    ap_uint<WIDTH> m,
+    ap_uint<WIDTH> mprime,
+    ap_uint<WIDTH> &result
+)
+#define WIDTH 8

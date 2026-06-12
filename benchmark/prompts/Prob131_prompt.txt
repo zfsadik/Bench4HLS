@@ -1,0 +1,20 @@
+Implement the following six‑state FSM using three flip‑flops. State codes:
+  A=0 (000), B=1 (001), C=2 (010), D=3 (011), E=4 (100), F=5 (101).
+
+  A (0) --0--> B
+  A (0) --1--> A
+  B (0) --0--> C
+  B (0) --1--> D
+  C (0) --0--> E
+  C (0) --1--> D
+  D (0) --0--> F
+  D (0) --1--> A
+  E (1) --0--> E
+  E (1) --1--> D
+  F (1) --0--> C
+  F (1) --1--> D
+
+Input is w, output is z, and reset is synchronous active‑high.
+
+The top-level function should have the following prototype:
+void TopModule(bool reset, bool w, bool &z)

@@ -1,0 +1,4 @@
+Implement a Mealy-type finite state machine (FSM) that detects the sequence "101" on a single-bit serial input x. The FSM has a single-bit output z that is asserted combinationally to 1 in the same cycle that the final bit of a "101" pattern is received (i.e., z depends on both the current state and the current input x). The FSM must support overlapping detection: the trailing "1" of one detected "101" may serve as the leading "1" of the next. Use exactly 3 states. The FSM has an active-low synchronous reset signal sresetn; when sresetn is low, the FSM returns to its initial state on the next rising clock edge. When sresetn is high, the FSM operates normally.
+
+The top-level function should have the following prototype:
+void TopModule(bool sresetn, bool x, bool &z)

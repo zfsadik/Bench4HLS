@@ -1,0 +1,8 @@
+Implements a 4×4 matrix inversion by performing Gauss–Jordan elimination with partial pivoting on an augmented 4×8 matrix ([A | I]).
+
+The module first builds an augmented 4×8 array by placing the input matrix on the left and the identity on the right. It then steps through four pivot positions: for each pivot column i, it scans rows i–3 to find the largest absolute entry, swaps that row into position i if needed, and scales the entire pivot row so that its leading element becomes 1.
+
+Once the pivot row is normalized, the circuit subtracts suitable multiples of that row from every other row to zero out the i-th column. After repeating this “find-pivot, swap, normalize, eliminate” sequence for all four columns, the left half has become the identity and the right half has become inv(A).
+
+The top-level function should have the following prototype:
+void TopModule(const float in[4][4], float out[4][4])

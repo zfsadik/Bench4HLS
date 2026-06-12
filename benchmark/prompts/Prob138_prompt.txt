@@ -1,0 +1,35 @@
+Given the following state machine with 1 input (in) and 2 outputs (out1, out2):
+
+  S0 (0, 0) --0--> S0
+  S0 (0, 0) --1--> S1
+  S1 (0, 0) --0--> S0
+  S1 (0, 0) --1--> S2
+  S2 (0, 0) --0--> S0
+  S2 (0, 0) --1--> S3
+  S3 (0, 0) --0--> S0
+  S3 (0, 0) --1--> S4
+  S4 (0, 0) --0--> S0
+  S4 (0, 0) --1--> S5
+  S5 (0, 0) --0--> S8
+  S5 (0, 0) --1--> S6
+  S6 (0, 0) --0--> S9
+  S6 (0, 0) --1--> S7
+  S7 (0, 1) --0--> S0
+  S7 (0, 1) --1--> S7
+  S8 (1, 0) --0--> S0
+  S8 (1, 0) --1--> S1
+  S9 (1, 1) --0--> S0
+  S9 (1, 1) --1--> S1
+
+Suppose this state machine uses one-hot encoding, where state[0] through state[9] correspond to the states S0 though S9, respectively. The outputs are zero unless otherwise specified.
+
+Implement the state transition logic and output logic portions of the state machine (but not the state flip-flops) for HLS. You are given the current state as input (state[10]) and must produce next state as output (next_state[10]) and the two outputs. Derive the logic equations by inspection assuming a one-hot encoding.
+
+The top-level function should have the following prototype:
+void TopModule(
+  bool             in,
+  ap_uint<10>      state,
+  ap_uint<10>     &next_state,
+  bool            &out1,
+  bool            &out2
+);

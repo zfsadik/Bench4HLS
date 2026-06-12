@@ -1,0 +1,12 @@
+Implement the circuit described by the Karnaugh map below. x is don't-care in the k-map, which means you may choose to output whatever value is convenient. The four inputs (a, b, c, d) are interpreted as a 4‑bit value where "a" is the most‑significant bit and "d" is the least‑significant bit and "out" is the output.
+
+              ab
+   cd   01  00  10  11
+   00 | x | 0 | 1 | 1 |
+   01 | 0 | 0 | x | x |
+   11 | 0 | 1 | 1 | 1 |
+   10 | 0 | 1 | 1 | 1 |
+
+
+The top-level function should have the following prototype:
+void TopModule(bool a, bool b, bool c, bool d, bool & out)

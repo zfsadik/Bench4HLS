@@ -1,0 +1,10 @@
+Build a 32-bit global history shift register, including support for rolling back state in response to a pipeline flush caused by a branch misprediction. When a branch prediction is made (predict_valid = 1), shift in predict_taken from the LSB side to update the branch history for the predicted branch. (predict_history[0] is the direction of the youngest branch.) When a branch misprediction occurs (train_mispredicted = 1), load the branch history register with the history after the completion of the mispredicted branch. This is the history before the mispredicted branch (train_history) concatenated with the actual result of the branch (train_taken). If both a prediction and misprediction occur at the same time, the misprediction takes precedence, because the pipeline flush will also flush out the branch that is currently making a prediction. predict_history is the value of the branch history register. reset is a synchronous active-high reset that resets the history register to zero on the rising clock edge.
+
+The top-level function should have the following prototype:
+void TopModule(bool reset,
+               bool predict_valid,
+               bool predict_taken,
+               ap_uint<32> &predict_history,
+               bool train_mispredicted,
+               bool train_taken,
+               ap_uint<32> train_history)

@@ -1,0 +1,27 @@
+You have to implement a hardware‐friendly, fully pipelined Secure Hash Algorithm (SHA-1) compression of a single 512-bit block (64 bytes) into a 160-bit digest. At a top‐level you can think of it as three major subunits: an input packing & padding unit, a message schedule generator, and an 80-round compression engine all orchestrated by a simple finite-state machine that steps through exactly 80 rounds and then finishes.
+
+The design can be structured into four steps:
+1. Load & Pad
+Grab up to 64 bytes of input, append a single “1” bit and zeros if it’s shorter, and tack the 64-bit message length onto the end packing everything into sixteen 32-bit words.
+
+2. Expand
+Grow those 16 words into 80 by repeatedly XORing four earlier words and rotating left by one bit, giving a new “message” word for each of 80 rounds.
+
+3. Mix
+Keep five 32-bit registers (A–E). For each round you pick one of four simple Boolean functions and one of four constants based on the round number, then compute
+	newA = rotate_left(A,5) + f(B,C,D) + E + message_word + constant  
+and shift the registers down (D->E, C->D, rotate_left(B,30)->C, A->B, newA->A).
+
+4. Finalize
+After 80 mixes, add A–E back into the original SHA-1 constants to form five output words (the 160-bit hash) and raise a “valid” flag.
+
+The top-level function should have the following prototype:
+void TopModule(
+    const BYTE   message[64],
+    ap_uint<32>  length,
+    WORD         digest_out[5],
+    bool        &valid
+)
+
+typedef ap_uint<8>  BYTE;
+typedef ap_uint<32> WORD;

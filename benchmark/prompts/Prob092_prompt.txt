@@ -1,0 +1,4 @@
+Implement an FSM for controlling a shift register in HLS‑C++. This module enables a shift register for exactly 4 clock cycles when a synchronous active‑high reset is applied. When reset is asserted on the rising clock edge, the FSM enters state B0 and shift_ena is asserted for 4 consecutive clock cycles (states B0, B1, B2, B3); after these 4 cycles, the FSM enters the Done state and shift_ena remains 0 until the next reset.
+
+The top-level function should have the following prototype:
+void TopModule(bool reset, bool &shift_ena)

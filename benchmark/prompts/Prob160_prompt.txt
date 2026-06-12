@@ -1,0 +1,6 @@
+A CRC-32 generator computes a 32-bit checksum known as a cyclic redundancy check over a block of data to detect accidental errors. Internally it treats the incoming bitstream as a polynomial over the finite field and divides it by a fixed 33-bit generator polynomial (for CRC-32, typically 0x04C11DB7 in normal form or 0xEDB88320 in reflected form). The 32-bit remainder of that division is the CRC code.
+
+Implement a CRC-32 generator for an input array (data) that carries the message over which the CRC is to be computed. The length port is a 32-bit unsigned input that tells the CRC unit how many bytes from the data array to process. It serves as a bound on the outer loop counter.
+
+The top-level function should have the following prototype:
+void TopModule(const unsigned char data[256], unsigned int length, unsigned int      &crc_out)

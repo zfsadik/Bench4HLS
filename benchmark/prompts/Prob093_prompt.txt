@@ -1,0 +1,4 @@
+Build a finite-state machine that searches for the sequence 1101 in an input bit stream. When the sequence is found, it should set start_shifting to 1, forever, until reset. Reset is synchronous active‑high; on the rising edge when reset is 1, the FSM returns to the initial state.
+
+The top-level function should have the following prototype:
+void TopModule(bool reset, bool data, bool &start_shifting)

@@ -1,0 +1,38 @@
+This module implements a two-step linear algebra pipeline in hardware: first it orthonormalizes a tall complex matrix via Modified Gram–Schmidt QR decomposition, then it solves a linear system by back-substitution.
+
+The dataflow can be described in five stages:
+1. Data Loading
+Stream the input matrix Q (size row × col) and vector b (length row) into on-chip buffers.
+
+2. Modified Gram-Schmidt QR Decomposition
+For each column i of Q:
+	a. Copy column i into a temp vector.
+	b. For every prior column j<i:
+		• Compute inner product ⟨Q_j, temp⟩ → R[j][i]
+		• Subtract that projection from temp.
+	c. Compute ‖temp‖ → R[i][i], then normalize temp by R[i][i] to form orthonormal Q_i.
+
+3. Forming the Transformed RHS 
+For each column i, compute b_tilde[i] = ⟨conj(Q_i), b⟩ via a complex dot product.
+
+4. Back-Substitution Solve
+Solve R*x = b_tilde by iterating j from col–1 down to 0:
+	• Subtract Σ_{k>j} R[j][k]*x[k] from b_tilde[j]
+	• Divide by R[j][j] to get x[j].
+
+5. Output Streaming
+Write the resulting vector x (length col) back out, one element per cycle.
+
+The top-level function should have the following prototype:
+void TopModule(float32_t Qr_i[MAX_ROW*MAX_COL],
+               float32_t Qi_i[MAX_ROW*MAX_COL],
+               int col, int row,
+               float32_t br_i[MAX_ROW],
+               float32_t bi_i[MAX_ROW],
+               float32_t xr_o[MAX_COL],
+               float32_t xi_o[MAX_COL])
+			   
+#define MAX_ROW   32
+#define MAX_COL   32
+
+typedef float float32_t;

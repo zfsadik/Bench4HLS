@@ -1,0 +1,4 @@
+Implement a combinational HLS circuit that sorts eight 32-bit signed integers (in[8]) into ascending order using a simple compare and swap network (selection sort) and then writes the sorted values to out[8]. Finally,  it asserts a 1-bit flag (valid) high once the sort is complete.
+
+The top-level function should have the following prototype:
+void TopModule(ap_int<32> in[8], ap_int<32> out[8], bool &valid)

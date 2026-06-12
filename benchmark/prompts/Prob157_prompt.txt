@@ -1,0 +1,4 @@
+Implement classic 2‑D inverse discrete cosine transform (IDCT) on an 8×8 block of frequency‑domain coefficients to reconstruct spatial‑domain pixels for HLS. The IDCT circuit takes each of the 64 frequency‑domain coefficients and, for every output pixel position (x,y), computes a weighted sum of all input[u][v] values. Each weight is the product of two cosine terms—one for the row index and one for the column index—together with a special 1/√2 scaling when u or v is zero. Once all 64 products have been accumulated, the sum is multiplied by 1/4 to complete the normalization, yielding the reconstructed pixel value.
+
+The top-level function should have the following prototype:
+void TopModule(const float input[8][8], float output[8][8])

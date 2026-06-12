@@ -1,0 +1,9 @@
+In many (older) serial communications protocols, each data byte is sent along with a start bit and a stop bit, to help the receiver delimit bytes from the stream of bits. Implement a byte‑receiver FSM that looks for:
+  • A start bit (0),
+  • 8 data bits (least significant first),
+  • A stop bit (1).
+
+When a full byte has been correctly framed (i.e. stop bit==1), assert `done` for one cycle. If the stop bit is 0, stay in an error state until `in` returns to 1 (the idle level) before looking for the next start bit.  Include a synchronous active‐high reset that returns the FSM to the START state.
+
+The top-level function should have the following prototype:
+void TopModule(bool in, bool reset, bool &done)

@@ -1,0 +1,4 @@
+Create a 4‑tap FIR filter that uses the transposed architecture and lets the coefficients be supplied at run‑time. It takes one input sample and a coefficient array per clock cycle and produces the output. Internally, it uses a 4-stage delay line (regs) to store partial accumulation results. On each cycle, all four MAC operations are performed in parallel using fully unrolled logic, and the delay line is updated from back to front. The newest output is stored in the last register stage and assigned as the filter result. 
+
+The top-level function should have the following prototype:
+void TopModule(ap_fixed<8,1>  sample_in, const ap_fixed<8,1> coeffs[4], ap_fixed<19,4> &sample_out)

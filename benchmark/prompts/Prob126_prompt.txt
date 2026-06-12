@@ -1,0 +1,25 @@
+This is a combinational circuit. The circuit has five 4-bit inputs (a, b, c, d, and e) and one 4-bit output q. Read the simulation waveforms to determine what the circuit does, then implement it.
+
+  time  a  b  c  d  e  q
+  0ns   x  x  x  x  x  x
+  5ns   x  x  x  x  x  x
+  10ns  x  x  x  x  x  x
+  15ns  a  b  0  d  e  b
+  20ns  a  b  1  d  e  e
+  25ns  a  b  2  d  e  a
+  30ns  a  b  3  d  e  d
+  35ns  a  b  4  d  e  f
+  40ns  a  b  5  d  e  f
+  45ns  a  b  6  d  e  f
+  50ns  a  b  7  d  e  f
+  55ns  a  b  8  d  e  f
+  60ns  a  b  9  d  e  f
+  65ns  a  b  a  d  e  f
+  70ns  a  b  b  d  e  f
+  75ns  a  b  c  d  e  f
+  80ns  a  b  d  d  e  f
+  85ns  a  b  e  d  e  f
+  90ns  a  b  f  d  e  f
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<4> a, ap_uint<4> b, ap_uint<4> c, ap_uint<4> d, ap_uint<4> e, ap_uint<4> & q)

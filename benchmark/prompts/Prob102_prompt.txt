@@ -1,0 +1,13 @@
+Suppose you're building a circuit to process scancodes from a PS/2 keyboard for a game. Given the last two bytes of scancodes received, you need to indicate whether one of the arrow keys on the keyboard have been pressed. This involves a fairly simple mapping, which can be implemented as a case statement (or if-elseif) with four cases.
+
+  Scancode(16-bit) | Arrow key
+  0xE06B           | left arrow
+  0xE072           | down arrow
+  0xE074           | right arrow
+  0xE075           | up arrow
+  Anything else    | none
+
+Your circuit has one 16-bit input (scancode), and four outputs (left, down, right, up). Build this circuit that recognizes these four scancodes and asserts the correct output.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<16> scancode, bool &left, bool &down, bool &right, bool &up)

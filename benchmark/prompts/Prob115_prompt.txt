@@ -1,0 +1,14 @@
+Implement a Moore finite state machine with one input, one output, and four states (A, B, C, D). The FSM has a synchronous active-high reset that resets to state A on the rising clock edge. Each call to TopModule represents one rising clock edge.
+
+State transition table:
+
+  state | next state (in=0) | next state (in=1) | output
+  A     | A                 | B                 | 0
+  B     | C                 | B                 | 0
+  C     | A                 | D                 | 0
+  D     | C                 | B                 | 1
+
+Output is 1 only in state D; 0 in all other states.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<1> in, ap_uint<1> reset, ap_uint<1> &out)
