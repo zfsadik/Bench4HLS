@@ -1,0 +1,682 @@
+[
+  {
+    "task_n": "Prob001",
+    "input": "Build a circuit that always outputs a LOW.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<1>& zero)"
+  },
+  {
+    "task_n": "Prob002",
+    "input": "Build a circuit with no inputs and one output. That output should always drive 0 (or logic low).\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<1>& out)"
+  },
+  {
+    "task_n": "Prob003",
+    "input": "Build a circuit with no inputs and one output. That output should always drive 1 (logic high).\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<1>& one)"
+  },
+  {
+    "task_n": "Prob004",
+    "input": "Build a circuit that reverses the byte order of a 32-bit vector.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<32> in, ap_uint<32>& out)"
+  },
+  {
+    "task_n": "Prob005",
+    "input": "Create a module that implements a bitwise NOT gate over an 8-bit word.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<8> in, ap_uint<8> &out)\n"
+  },
+  {
+    "task_n": "Prob006",
+    "input": "Build a module that takes an 8\u2011bit input vector and outputs an 8\u2011bit vector with its bit ordering reversed.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<8> in, ap_uint<8>& out)"
+  },
+  {
+    "task_n": "Prob007",
+    "input": "Create a module with one input and one output that behaves like a wire.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool in, bool &out)"
+  },
+  {
+    "task_n": "Prob008",
+    "input": "The module assigns the output port to the same value as the input port combinationally.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<1> in, ap_uint<1> &out)\n"
+  },
+  {
+    "task_n": "Prob009",
+    "input": "A \"population count\" circuit counts the number of '1's in an input vector. Build a population count circuit for a 3\u2011bit input vector.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<3> in, ap_uint<2>& out)"
+  },
+  {
+    "task_n": "Prob010",
+    "input": "Implement the boolean function z = (x^y) & x.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool x, bool y, bool &z)"
+  },
+  {
+    "task_n": "Prob011",
+    "input": "Implement a module that implements a NOR gate.\nThe module has two inputs, a and b, and one output out.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool a, bool b, bool &out)"
+  },
+  {
+    "task_n": "Prob012",
+    "input": "Create a module that implements an XNOR gate.\nThe module has two inputs, a and b, and one output out.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool a, bool b, bool &out)"
+  },
+  {
+    "task_n": "Prob013",
+    "input": "Implement a 2-input NOR gate.\nThe module has two inputs, in1 and in2, and one output out.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool in1, bool in2, bool &out)"
+  },
+  {
+    "task_n": "Prob014",
+    "input": "Implement a module that implements an AND gate.\nThe module has two inputs, a and b, and one output out.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool a, bool b, bool &out)"
+  },
+  {
+    "task_n": "Prob015",
+    "input": "Build a combinational circuit that splits an input half\u2011word (16 bits, [15:0]) into its upper byte ([15:8]) and lower byte ([7:0]).\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<16> in, ap_uint<8> &out_hi, ap_uint<8> &out_lo)"
+  },
+  {
+    "task_n": "Prob016",
+    "input": "Implement a 4\u2011bit adder with full adders. The output sum should include the carry-out bit.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<4> x, ap_uint<4> y, ap_uint<5> &sum)"
+  },
+  {
+    "task_n": "Prob017",
+    "input": "Implement a 2\u20111 multiplexer. When sel = 0, choose a; when sel = 1, choose b.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<100> a, ap_uint<100> b, bool sel, ap_uint<100> &out)"
+  },
+  {
+    "task_n": "Prob018",
+    "input": "Create a 1\u2011bit wide, 256\u2011to\u20111 multiplexer. The 256 inputs are packed into a single 256\u2011bit input vector. When sel = 0, select bit 0 of in; when sel = 1, select bit 1; \u2026; when sel = 255, select bit 255.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<256> in, ap_uint<8> sel, bool &out)"
+  },
+  {
+    "task_n": "Prob019",
+    "input": "Implement a circuit where two inputs, in1 and in2, are fed to an AND gate\u2014but the in2 input is inverted (bubble).\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<1> in1, ap_uint<1> in2, ap_uint<1> &out)\n"
+  },
+  {
+    "task_n": "Prob020",
+    "input": "Create a circuit that has two 2\u2011bit inputs A and B and produces a 1\u2011bit output z. The value of z should be 1 if A = B, otherwise z should be 0.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<2> A, ap_uint<2> B, bool &z)"
+  },
+  {
+    "task_n": "Prob021",
+    "input": "Create a 4\u2011bit wide, 256\u2011to\u20111 multiplexer. The 256 4\u2011bit inputs are all packed into a single 1024\u2011bit input vector. When sel = 0, the multiplexer selects bits in[3:0]; when sel = 1, it selects bits in[7:4]; when sel = 2, it selects bits in[11:8]; and so on.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<1024> in, ap_uint<8> sel, ap_uint<4> &out)"
+  },
+  {
+    "task_n": "Prob022",
+    "input": "Implement a one\u2011bit wide, 2\u2011to\u20111 multiplexer. When sel = 0, choose input a; when sel = 1, choose input b.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool a, bool b, bool sel, bool &out)"
+  },
+  {
+    "task_n": "Prob023",
+    "input": "Implement a circuit that reverses a 100\u2011bit input vector. The module takes a 100\u2011bit input (ap_uint<100>) and produces a 100\u2011bit output where the bit order is reversed. \n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<100> in, ap_uint<100> &out)"
+  },
+  {
+    "task_n": "Prob024",
+    "input": "Implement a half adder. A half adder adds two 1\u2011bit inputs (with no carry\u2011in) and produces a sum and a carry\u2011out.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool a, bool b, bool &sum, bool &cout)"
+  },
+  {
+    "task_n": "Prob025",
+    "input": "Parity checking is often used as a simple method of detecting errors when transmitting data through an imperfect channel. Create a circuit that will compute a parity bit for a 8-bit byte (which will add a 9th bit to the byte). We will use \"even\" parity, where the parity bit is just the XOR of all 8 data bits.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<8> in, bool &parity)"
+  },
+  {
+    "task_n": "Prob026",
+    "input": "Implement a full adder. A full adder adds three 1\u2011bit inputs (a, b, and carry\u2011in cin) and produces a 1\u2011bit sum and a 1\u2011bit carry\u2011out (cout).\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool a, bool b, bool cin, bool &cout, bool &sum)"
+  },
+  {
+    "task_n": "Prob027",
+    "input": "Implement a register with clock enable. When ena is high, the register captures the value of d on the rising clock edge. When ena is low, the register holds its previous value. The circuit has two 1-bit inputs: d (data) and ena (enable).\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool d, bool ena, bool &q)"
+  },
+  {
+    "task_n": "Prob028",
+    "input": "Implement a circuit with three 1\u2011bit inputs (in1, in2, and in3). The circuit first computes the XNOR of in1 and in2 and then XORs that result with in3.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool in1, bool in2, bool in3, bool &out)"
+  },
+  {
+    "task_n": "Prob029",
+    "input": "Build a population count circuit for a 255\u2011bit input vector. The circuit counts the number of '1's in the input and outputs the count as an 8\u2011bit value.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<255> in, ap_uint<8> &out)"
+  },
+  {
+    "task_n": "Prob030",
+    "input": "Implement a D flip-flop. The circuit has one 1-bit input, d (data), and one 1-bit output, q. On each rising clock edge, q captures the value of d.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool d, bool &q)\n"
+  },
+  {
+    "task_n": "Prob031",
+    "input": "Implement a circuit that has one 3\u2011bit input, then outputs the same vector and also splits it into three separate 1\u2011bit outputs. In other words, the circuit takes a 3\u2011bit vector vec and produces:\n\nA 3\u2011bit output outv (which is the same as vec), and\n\nThree 1\u2011bit outputs o2, o1, and o0 such that:\no2 is connected to bit position 2 of vec,\no1 is connected to bit position 1 of vec, and\no0 is connected to bit position 0 of vec.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<3> vec, ap_uint<3> &outv, bool &o2, bool &o1, bool &o0)"
+  },
+  {
+    "task_n": "Prob032",
+    "input": "Assume you have two 8\u2011bit two\u2019s complement numbers, a and b. These numbers are added to produce an 8\u2011bit result s, and you must also compute whether a signed overflow occurred.\nThe overflow is detected when the sign bits of a and b are the same but differ from the sign bit of s.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_int<8> a, ap_int<8> b, ap_int<8> &s, bool &overflow)"
+  },
+  {
+    "task_n": "Prob033",
+    "input": "Create a circuit that implements eight D flip\u2011flops. The circuit has an 8\u2011bit data input (d). On every rising clock edge, the flip\u2011flops capture the value of d and output it on an 8\u2011bit output (q).\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<8> d, ap_uint<8> &q)"
+  },
+  {
+    "task_n": "Prob034",
+    "input": "Build a decade counter that counts from 1 through 10. The counter has a synchronous reset input (reset). On every rising clock edge, if reset is high or the counter value is 10, the counter is reset to 1; otherwise, it increments by 1. The counter output is a 4\u2011bit number q.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, ap_uint<4> &q)"
+  },
+  {
+    "task_n": "Prob035",
+    "input": "Implement a circuit to control a cellphone\u2019s ringer and vibration motor. The circuit has two inputs:\nring: indicates an incoming call (when high, the phone should ring)\nvibrate_mode: indicates the phone is in vibrate mode\n\nThe outputs are:\nringer: should be high if the phone is ringing and not in vibrate mode\nmotor: should be high if the phone is ringing and in vibrate mode\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool ring, bool vibrate_mode, bool &ringer, bool &motor)"
+  },
+  {
+    "task_n": "Prob036",
+    "input": "Build a counter that counts from 0 to 999 (inclusive) with a period of 1000 cycles. The counter has a synchronous, active-high reset input (reset). The counter output is a 10\u2011bit number q.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, ap_uint<10> &q);"
+  },
+  {
+    "task_n": "Prob037",
+    "input": "Build a 4\u2011bit binary counter that counts from 0 through 15 (with a period of 16 cycles). The counter has a synchronous, active\u2011high reset input (reset). The counter output is a 4\u2011bit value q.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, ap_uint<4> &q)"
+  },
+  {
+    "task_n": "Prob038",
+    "input": "Build a 4\u2011bit binary counter that counts from 0 through 9 (a period of 10 cycles). The counter has one input:\n\nreset (synchronous, active\u2011high reset)\n\nThe reset input is active high synchronous, and should reset the counter to 0. The output is a 4\u2011bit value q.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, ap_uint<4> &q)"
+  },
+  {
+    "task_n": "Prob039",
+    "input": "Build a circuit that implements eight D flip\u2011flops with an active\u2011high synchronous reset. In HLS, each function call models one clock cycle. The module has two inputs:\n\nd (an 8\u2011bit data input)\nreset (synchronous, active\u2011high reset)\n\nThe output is an 8\u2011bit vector q.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<8> d, bool reset, ap_uint<8> &q)"
+  },
+  {
+    "task_n": "Prob040",
+    "input": "Build a circuit that sign\u2011extends an 8\u2011bit number to 32 bits. This is done by replicating the sign bit (bit[7]) 24 times to the left of the 8\u2011bit input. In HLS\u2011C++, you can perform sign extension automatically by converting a signed 8\u2011bit number to a signed 32\u2011bit number. The input is a 8-bit number (in) and the output is a 32-bit number (out).\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_int<8> in, ap_int<32> &out)"
+  },
+  {
+    "task_n": "Prob041",
+    "input": "Given five 1-bit signals (a, b, c, d, and e), compute all 25 pairwise one- bit comparisons in the 25-bit output vector. The output should be 1 if the two bits being compared are equal. Example: out[24] = ~a ^ a; out[23] = ~a ^ b; out[22] = ~a ^ c; ... out[ 1] = ~e ^ d; out[ 0] = ~e ^ e.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool a, bool b, bool c, bool d, bool e, ap_uint<25> &out)"
+  },
+  {
+    "task_n": "Prob042",
+    "input": "Build a circuit that has two 3\u2011bit inputs that computes:\n\nout_or_bitwise: the bitwise\u2011OR of the two 3\u2011bit vectors.\nout_or_logical: the logical\u2011OR of the two vectors (i.e. true if either vector is nonzero).\nout_not: a 6\u2011bit output formed by concatenating the bitwise inverse of b (placed in bits [5:3]) with the bitwise inverse of a (placed in bits [2:0]).\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<3> a, ap_uint<3> b, \n               ap_uint<3> &out_or_bitwise, bool &out_or_logical, \n               ap_uint<6> &out_not)"
+  },
+  {
+    "task_n": "Prob043",
+    "input": "For each bit in an 8-bit vector, detect when the input signal changes from one clock cycle to the next (detect any edge). Each output bit is set in the cycle that the transition is detected: it is the XOR of the current input bit and the registered input bit from the previous clock cycle (i.e., output is combinationally derived from current in XOR registered previous-cycle in, so it appears one cycle after the edge occurs).\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<8> in, ap_uint<8> &anyedge)"
+  },
+  {
+    "task_n": "Prob044",
+    "input": "Build a circuit that implements eight D flip\u2011flops with an active\u2011high synchronous reset that resets the output to 0x34. All flip\u2011flops are triggered on the rising clock edge. In other words, on every rising clock edge, if reset is high then the output q (an 8\u2011bit vector) is set to 0x34; otherwise, q is updated with the 8\u2011bit input d.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<8> d, bool reset, ap_uint<8> &q)"
+  },
+  {
+    "task_n": "Prob045",
+    "input": "Create 8 D flip-flops with active high synchronous reset. When reset is high, output q is synchronously cleared to 0 (modeled implicitly per HLS pipeline semantics where each function invocation represents one rising clock edge). Otherwise, q captures d each clock cycle. The input is a 8\u2011bit data input (d). The output is an 8\u2011bit vector q.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<8> d, bool reset, ap_uint<8> &q)"
+  },
+  {
+    "task_n": "Prob046",
+    "input": "Implement a simple D flip\u2011flop with an active\u2011high synchronous reset. On every rising edge of clk, if r is high then the flip\u2011flop is reset (output q becomes 0); otherwise, q is updated to the input d.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool d, bool r, bool &q)"
+  },
+  {
+    "task_n": "Prob047",
+    "input": "Implement a positive edge triggered D flip-flop with a synchronous reset (\"sr\"). The circuit has two 1-bit inputs:\n\nd: Data input\nsr: Synchronous reset (active high); when asserted, the output is cleared to 0 on the rising clock edge\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool d, bool sr, bool &q);\n"
+  },
+  {
+    "task_n": "Prob048",
+    "input": "Implement a circuit that has three 1\u2011bit inputs (a, b, and c) and produces a 1\u2011bit output out defined by the Karnaugh map shown below.\n\n          a\n   bc   0   1\n   00 | 0 | 1 |\n   01 | 1 | 1 |\n   11 | 1 | 1 |\n   10 | 1 | 1 |\n\nThe top-level function should have the following prototype:   \nvoid TopModule(bool a, bool b, bool c, bool &out)"
+  },
+  {
+    "task_n": "Prob049",
+    "input": "Build a combinational circuit with a 4\u2011bit input (in) that produces three outputs:\n\nout_and: the AND reduction of the 4\u2011bit vector.\nout_or: the OR reduction of the 4\u2011bit vector.\nout_xor: the XOR reduction of the 4\u2011bit vector.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<4> in, ap_uint<1> &out_and, ap_uint<1> &out_or, ap_uint<1> &out_xor)\n"
+  },
+  {
+    "task_n": "Prob050",
+    "input": "Build a combinational circuit with 100 inputs (packed into a 100\u2011bit vector). The circuit produces three outputs:\n\nout_and: the output of a 100\u2011input AND gate.\nout_or: the output of a 100\u2011input OR gate.\nout_xor: the output of a 100\u2011input XOR gate.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<100> in, bool &out_and, bool &out_or, bool &out_xor)"
+  },
+  {
+    "task_n": "Prob051",
+    "input": "Implement a D flip-flop with XOR feedback. The circuit is defined as follows:\n\nThe flip-flop is positive-edge triggered by clk.\nThe flip-flop's input is computed as the XOR of the external input in and the flip-flop's previous output. The output is q.\nThere is no reset; the initial value of the flip-flop is 0.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<1> in, ap_uint<1> &q)"
+  },
+  {
+    "task_n": "Prob052",
+    "input": "Build a sequential circuit that detects, for each bit of an 8\u2011bit vector, when the input changes from 0 in one clock cycle to 1 in the next (i.e. a positive\u2011edge detection for each bit). The output is an 8\u2011bit vector, where each bit is set (1) in the same cycle that the 0 to 1 transition is detected (i.e., when the current input bit is 1 and the previous cycle's input bit was 0).\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<8> in, ap_uint<8> &pedge)"
+  },
+  {
+    "task_n": "Prob053",
+    "input": "Build a combinational circuit that, given four 8\u2011bit unsigned inputs (a, b, c, and d), finds and outputs the minimum value. (Unsigned numbers are compared using standard comparison operators.)\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<8> a, ap_uint<8> b, ap_uint<8> c, ap_uint<8> d, ap_uint<8> &min)"
+  },
+  {
+    "task_n": "Prob054",
+    "input": "A JK flip-flop has the below truth table. Note: Q_old is the current output Q before each function invocation.\n\n  J | K | Q\n  0 | 0 | Q_old\n  0 | 1 | 0\n  1 | 0 | 1\n  1 | 1 | ~Q_old\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool j, bool k, bool &Q)\n"
+  },
+  {
+    "task_n": "Prob055",
+    "input": "Implement a combinational circuit that, given four 1\u2011bit inputs (a, b, c, and d), produces a 1\u2011bit output (out) defined by the following Karnaugh map:\n\n              ab\n   cd   00  01  11  10\n   00 | 1 | 1 | 0 | 1 |\n   01 | 1 | 0 | 0 | 1 |\n   11 | 0 | 1 | 1 | 1 |\n   10 | 1 | 1 | 0 | 0 |\n\nThe top-level function should have the following prototype:   \nvoid TopModule(bool a, bool b, bool c, bool d, bool &out)"
+  },
+  {
+    "task_n": "Prob056",
+    "input": "Build a combinational circuit with three 1\u2011bit inputs (a, b, and c) that produces four 1\u2011bit outputs (w, x, y and z) with the following direct connections:\n\nw is connected to a\nx is connected to b\ny is connected to b\nz is connected to c\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool a, bool b, bool c, bool &w, bool &x, bool &y, bool &z)"
+  },
+  {
+    "task_n": "Prob057",
+    "input": "Build a sequential circuit that implements a 4\u2011bit shift register using four D flip\u2011flops with an active\u2011low synchronous reset. The design has two 1\u2011bit inputs and one 1\u2011bit output:\n\nresetn: active\u2011low synchronous reset; when low at a rising edge, the register is reset to 0\nin: serial data input\nout: output taken from the most\u2011significant bit (bit 3) of the shift register\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool resetn, bool in, bool &out)"
+  },
+  {
+    "task_n": "Prob058",
+    "input": "Implement one stage of an n\u2011bit shift register. This stage has the following inputs and output:\n\nw: The serial data input for this stage (from the previous stage)\nR: The value to load when a load condition is true\nE: Enable input for shifting\nL: Load signal; when high, the stage loads the value R\nQ: The output of this stage (i.e. the stored bit)\n\nBehavior:\nOn every rising edge of clk:\nIf L is asserted, load R into the flip\u2011flop.\nElse if E is asserted, shift in w.\nOtherwise, hold the current state.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool w, bool R, bool E, bool L, bool &Q)\n"
+  },
+  {
+    "task_n": "Prob059",
+    "input": "Find the bug and fix this 8-bit wide 2-to-1 mux design for HLS.\nMux behaviour: If sel is 1, then output a; otherwise, output b.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<8> a, ap_uint<8> b, bool sel, ap_uint<8> &out) {\n\tout = (((ap_uint<8>)(!sel)) & a) | (((ap_uint<8>)(sel)) & b);\n}\n"
+  },
+  {
+    "task_n": "Prob060",
+    "input": "Build a four\u2011bit shift register that also acts as a down counter. The module has the following inputs and output:\n\nshift_ena: When 1, the register shifts left (data is shifted in most\u2011significant\u2011bit first) with the new bit coming in at the least\u2011significant bit.\ncount_ena: When 1 (and shift_ena is 0), the current 4\u2011bit number in the register is decremented.\ndata: The serial data input to be shifted in.\nq: A 4\u2011bit register output.\n\nNote: The design assumes that shift_ena and count_ena are never both active at the same time (if both are 1, either behavior is acceptable).\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool shift_ena, bool count_ena, bool data, ap_uint<4> &q)\n"
+  },
+  {
+    "task_n": "Prob061",
+    "input": "Build a combinational circuit that, given six 5\u2011bit input vectors (a, b, c, d, e, and f), produces four 8\u2011bit output vectors (w, x, y, and z). The output is formed by concatenating the six 5\u2011bit inputs (in the order a, b, c, d, e, f) followed by the 2-bit constant 2\u2019b11 (two 1-bits) in the least\u2011significant bit positions.\nThen, the 32\u2011bit result is split into four 8\u2011bit outputs in the order: w, x, y, z.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<5> a, ap_uint<5> b, ap_uint<5> c, \n               ap_uint<5> d, ap_uint<5> e, ap_uint<5> f,\n               ap_uint<8> &w, ap_uint<8> &x, ap_uint<8> &y, ap_uint<8> &z);"
+  },
+  {
+    "task_n": "Prob062",
+    "input": "Implement a module that mimics the functionality of the 7420 chip from the 7400\u2011series. This chip has two independent 4\u2011input NAND gates. The module has eight 1\u2011bit inputs and two 1\u2011bit outputs. The first 4\u2011input NAND gate has inputs p1a, p1b, p1c, and p1d; its output, p1y, should be the NAND of those inputs. The second 4\u2011input NAND gate has inputs p2a, p2b, p2c, and p2d; its output, p2y, is the NAND of those inputs.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool p1a, bool p1b, bool p1c, bool p1d, bool &p1y, bool p2a, bool p2b, bool p2c, bool p2d, bool &p2y)"
+  },
+  {
+    "task_n": "Prob063",
+    "input": "Implement a circuit that, for each bit in a 32\u2011bit vector, \"captures\" when the input changes from 1 (in one clock cycle) to 0 in the next cycle. Once a bit is captured, that bit of the output remains 1 until the circuit is reset. The reset is active\u2011high and synchronous.\n\nThe previous-input register (d_last) is updated unconditionally every cycle with the current value of `in`, regardless of whether reset is asserted. Reset only clears the captured-output register, not d_last.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, ap_uint<32> in, ap_uint<32> &out);\n"
+  },
+  {
+    "task_n": "Prob064",
+    "input": "Build a decade counter that counts from 0 through 9 (with a period of 10). The counter is updated only if the \"slowena\" input is true. The reset input is active-high and resets the counter to 0; reset takes priority over slowena. If slowena is true (and reset is false), the counter increments by 1 (wrapping from 9 back to 0); if slowena is false, the counter holds its value. The output is a 4-bit vector q. There is no explicit clock port; the HLS tool infers the clock.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool slowena, bool reset, ap_uint<4> &q)\n"
+  },
+  {
+    "task_n": "Prob065",
+    "input": "Build a 4\u2011digit BCD counter. The 16\u2011bit counter q is partitioned as follows:\n\u2022 q[3:0] is the ones digit\n\u2022 q[7:4] is the tens digit\n\u2022 q[11:8] is the hundreds digit\n\u2022 q[15:12] is the thousands digit\n\nFor digits [3:1], output a 3\u2011bit enable signal (ena) that reflects when each upper digit should increment next: ena[0] for the tens digit (ones==9), ena[1] for the hundreds digit (lower two digits==99), ena[2] for the thousands digit (lower three digits==999). Each upper digit increments when its enable condition is met. A synchronous active\u2011high reset resets the counter to 0. The function is called once per implicit HLS clock cycle; there is no explicit clk parameter.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, ap_uint<3> &ena, ap_uint<16> &q)\n"
+  },
+  {
+    "task_n": "Prob066",
+    "input": "Create a combinational circuit that implements the truth table.\n\n  x3 | x2 | x1 | f\n  0  | 0  | 0  | 0\n  0  | 0  | 1  | 0\n  0  | 1  | 0  | 1\n  0  | 1  | 1  | 1\n  1  | 0  | 0  | 0\n  1  | 0  | 1  | 1\n  1  | 1  | 0  | 0\n  1  | 1  | 1  | 1\n\nThe top-level function should have the following prototype:  \nvoid TopModule(bool x3, bool x2, bool x1, bool &f)"
+  },
+  {
+    "task_n": "Prob067",
+    "input": "A single-output digital system with four inputs (a,b,c,d) generates a logic-1 when 2, 7, or 15 appears on the inputs, and a logic-0 when 0, 1, 4, 5, 6, 9, 10, 13, or 14 appears. The input conditions for the numbers 3, 8, 11, and 12 never occur in this system. For example, 7 corresponds to a,b,c,d being set to 0,1,1,1, respectively. In this encoding, `a` is the MSB and `d` is the LSB of the 4-bit input. Determine the output out_sop in minimum sum-of-products form, and the output out_pos in minimum product-of-sums form. For the don't-care input conditions (3, 8, 11, 12), out_sop and out_pos may independently assign 0 or 1; the minimum SOP and POS expressions may differ on these inputs.\n\nThe top-level function should have the following prototype:\nvoid TopModule (bool a, bool b, bool c, bool d, bool &out_sop, bool &out_pos)\n"
+  },
+  {
+    "task_n": "Prob068",
+    "input": "Build a priority encoder for 8-bit inputs. Given an 8\u2011bit input vector (in), the function finds the first (least significant) bit that is 1 and outputs (pos) its index (0\u20137). If no bit is 1, the output is 0.\n\nFor example, for input 0x90, the first high bit (starting from LSB) is bit[4], so the output should be 4.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<8> in, ap_uint<3> &pos)"
+  },
+  {
+    "task_n": "Prob069",
+    "input": "A heating/cooling thermostat controls both a heater (during winter) and an air conditioner (during summer). Implement a circuit that will turn on and off the heater, air conditioning, and blower fan as appropriate. The thermostat can be in one of two modes: heating (mode = 1) and cooling (mode = 0). In heating mode, turn the heater on when it is too cold (too_cold = 1) but do not use the air conditioner. In cooling mode, turn the air conditioner on when it is too hot (too_hot = 1), but do not turn on the heater. When the heater or air conditioner are on, also turn on the fan to circulate the air. In addition, the user can also request the fan to turn on (fan_on = 1), even if the heater and air conditioner are off.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool mode, bool too_cold, bool too_hot, bool fan_on, bool &heater, bool &aircon, bool &fan)"
+  },
+  {
+    "task_n": "Prob070",
+    "input": "Create a 16-bit register with byte-enable write control. The byte-enable inputs (byteena) control whether each byte of the register should be written to on that cycle. byteena[1] controls the upper byte d[15:8], while byteena[0] controls the lower byte d[7:0]. resetn is a synchronous, active-low reset. The design has a 16-bit data input (d) and a 16-bit output (q).\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool resetn, ap_uint<2> byteena, ap_uint<16> d, ap_uint<16> &q)\n"
+  },
+  {
+    "task_n": "Prob071",
+    "input": "Create a finite state machine using three D flip-flops. Assume that the flip-flops are initially reset to zero before the machine begins.\n\nThe input x feeds three two-input gates:\nXOR:  first input is x and the second is the corresponding flip-flop's output.\nAND:  first input is x and the second is the complemented output of its flip-flop.\nOR:   first input is x and the second is the complemented output of its flip-flop.\n\nThe outputs of these gates are captured by three D flip-flops on the positive edge of clk. The outputs of the flip-flops all go to a three-input NOR, whose output is z.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool x, bool &z)\n"
+  },
+  {
+    "task_n": "Prob072",
+    "input": "Build a two-bit saturating counter. The counter increments (up to a maximum of 3) when train_valid = 1 and train_taken = 1. It decrements (down to a minimum of 0) when train_valid = 1 and train_taken = 0. When not training (train_valid = 0), the counter keeps its value unchanged. areset is a synchronous reset (active high) that resets the counter to weakly not-taken (2'b01) on the rising clock edge. Output state[1:0] is the two-bit counter value.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool areset, bool train_valid, bool train_taken, ap_uint<2> &state)\n"
+  },
+  {
+    "task_n": "Prob073",
+    "input": "Create a 6-to-1 multiplexer.  The multiplexer has one 3\u2011bit select input (sel) and six 4\u2011bit data inputs (data0 through data5). When sel is 0\u20135, the corresponding data input is routed to the output. For any other value of sel, the output is 0. The output is a 4\u2011bit value (out).\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<3> sel,\n               ap_uint<4> data0,\n               ap_uint<4> data1,\n               ap_uint<4> data2,\n               ap_uint<4> data3,\n               ap_uint<4> data4,\n               ap_uint<4> data5,\n               ap_uint<4> &out)"
+  },
+  {
+    "task_n": "Prob074",
+    "input": "Implement the following circuit. Create two intermediate wires (named arbitrarily) to connect the AND and OR gates together. The circuit is composed of two layers. The first layer has two AND gates:\n - One AND gate takes inputs a and b.\n - The other AND gate takes inputs c and d.\n\nThe second layer has an OR gate that combines the outputs of these two AND gates, driving the output 'out'. Additionally, an inverted output 'out_n' is produced.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<1> a, ap_uint<1> b, ap_uint<1> c, ap_uint<1> d, ap_uint<1> &out, ap_uint<1> &out_n)\n"
+  },
+  {
+    "task_n": "Prob075",
+    "input": "A dual-edge triggered flip-flop captures its input on both edges of the clock. FPGAs do not have native dual-edge triggered flip-flops. Implement a synthesizable version using a single register (qp) that captures the input d on the rising clock edge. The output q reflects the current register value.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool d, bool &q)"
+  },
+  {
+    "task_n": "Prob076",
+    "input": "The following is the state transition table for a Moore state machine with one input, one output, and four states. Use the following one-hot state encoding: A=4'b0001, B=4'b0010, C=4'b0100, D=4'b1000. Derive state transition and output logic equations by inspection assuming a one-hot encoding. Implement only the state transition logic and output logic (the combinational logic portion) for this state machine.\n\n  State | Next state in=0, Next state in=1 | Output\n  A     | A, B                             | 0\n  B     | C, B                             | 0\n  C     | A, D                             | 0\n  D     | C, B                             | 1\n\nInputs: in (1-bit), state (4\u2011bit one\u2011hot encoded current state)\nOutputs: out (1\u2011bit), next_state (4\u2011bit one\u2011hot encoded next state)\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool in, ap_uint<4> state, ap_uint<4> &next_state, bool &out)"
+  },
+  {
+    "task_n": "Prob077",
+    "input": "Implement a timer that counts down for a given number of clock cycles, then asserts a signal to indicate that the given duration has elapsed. A good way to implement this is with a down-counter that asserts an output signal when the count becomes 0. At each clock cycle:\n\n   (1) If load = 1, load the internal counter with the 10-bit data, the number of clock cycles the timer should count before timing out. The counter can be loaded at any time, including when it is still counting.\n   \n   (2) If load = 0, the internal counter should decrement by 1. The output signal tc (\"terminal count\") indicates whether the internal counter has reached 0. Once the counter has reached 0, it should remain 0 until the counter is loaded again.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool load, ap_uint<10> data, bool &tc)"
+  },
+  {
+    "task_n": "Prob078",
+    "input": "The 7458 is a chip with four AND gates and two OR gates. Create a design with the same functionality as the 7458 chip. It has 10 inputs and 2 outputs.\n\nIn this circuit, p1y should be the OR of two 3-input AND gates: one that ANDs p1a, p1b, and p1c, and the second that ANDs p1d, p1e, and p1f. The output p2y is the OR of two 2-input AND gates: one that ANDs p2a and p2b, and the second that ANDs p2c and p2d.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool p1a, bool p1b, bool p1c,\n               bool p1d, bool p1e, bool p1f,\n               bool p2a, bool p2b, bool p2c, bool p2d,\n               bool &p1y, bool &p2y)"
+  },
+  {
+    "task_n": "Prob079",
+    "input": "A linear feedback shift register is a shift register usually with a few XOR gates to produce the next state of the shift register. A Galois LFSR is one particular arrangement that shifts right, where a bit position with a \"tap\" is XORed with the LSB output bit (q[0]) to produce its next value, while bit positions without a tap shift right unchanged.  Build a 32-bit Galois LFSR with taps at bit positions 32, 22, 2, and 1. Reset should be active high synchronous, and should reset the output q to 32'h1.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, ap_uint<32> &q)"
+  },
+  {
+    "task_n": "Prob080",
+    "input": "Implement a combinational circuit in HLS that behaves as specified by the following simulation waveform:\n\n  time   x   y   z\n  0ns    0   0   1\n  5ns    0   0   1\n  10ns   0   0   1\n  15ns   0   0   1\n  20ns   0   0   1\n  25ns   1   0   0\n  30ns   1   0   0\n  35ns   0   1   0\n  40ns   0   1   0\n  45ns   1   1   1\n  50ns   1   1   1\n  55ns   0   0   1\n  60ns   0   1   0\n  65ns   0   1   0\n  70ns   1   1   1\n  75ns   0   1   0\n  80ns   0   1   0\n  85ns   0   1   0\n  90ns   1   0   0\n\nInputs: x (1\u2011bit), y (1\u2011bit)\nOutput: z (1\u2011bit)\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<1> x, ap_uint<1> y, ap_uint<1> &z)\n"
+  },
+  {
+    "task_n": "Prob081",
+    "input": "In this question, you will design a circuit for an 8x1 memory, where writing to the memory is accomplished by shifting-in bits, and reading is \"random access\", as in a typical RAM. You will then use the circuit to realize a 3-input logic function. First, create an 8-bit shift register with 8 D-type flip-flops. Label the flip-flop outputs from Q[0]...Q[7]. The shift register input should be called S, which feeds the input of Q[0] (MSB is shifted in first). The enable input is synchronous active high and controls whether to shift. Extend the circuit to have 3 additional inputs A,B,C and an output Z. The circuit's behaviour should be as follows: when ABC is 000, Z=Q[0], when ABC is 001, Z=Q[1], and so on. Your circuit should contain ONLY the 8-bit shift register, and multiplexers.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool enable, bool S, bool A, bool B, bool C, bool &Z)"
+  },
+  {
+    "task_n": "Prob082",
+    "input": "Build a 4-bit shift register (right shift), with synchronous active-high reset, synchronous active high signals load, and enable.\n\n  (1) reset: Resets shift register to zero.\n\n  (2) load: Loads shift register with data[3:0] instead of shifting.\n\n  (3) ena: Shift right (q[3] becomes zero, q[0] is shifted out and disappears).\n\n  (4) q: The contents of the shift register. If both the load and ena inputs are asserted (1), the load input has higher priority.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, bool load, bool ena, ap_uint<4> data, ap_uint<4> &q)"
+  },
+  {
+    "task_n": "Prob083",
+    "input": "A linear feedback shift register is a shift register usually with a few XOR gates to produce the next state of the shift register. A Galois LFSR is one particular arrangement that shifts right, where a bit position with a \"tap\" is XORed with the LSB output bit (q[0]) to produce its next value, while bit positions without a tap shift right unchanged. If the taps positions are carefully chosen, the LFSR can be made to be \"maximum-length\". A maximum-length LFSR of n bits cycles through 2**n-1 states before repeating (the all-zero state is never reached). Build a 5-bit maximal-length Galois LFSR with taps at bit positions 5 and 3. The active-high synchronous reset should reset the LFSR output to 1.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, ap_uint<5> &q)\n"
+  },
+  {
+    "task_n": "Prob084",
+    "input": "Build a combinational circuit in HLS C++ with two 1\u2011bit inputs, a and b, and seven outputs defined as follows:\n\n\t1. out_and: a AND b\n\t2. out_or: a OR b\n\t3. out_xor: a XOR b\n\t4. out_nand: NOT (a AND b)\n\t5. out_nor: NOT (a OR b)\n\t6. out_xnor: a XNOR b\n\t7. out_anotb: a AND (NOT b)\n\nThe top-level function should have the following prototype:\t\nvoid TopModule(bool a, bool b,\n               bool &out_and,\n               bool &out_or,\n               bool &out_xor,\n               bool &out_nand,\n               bool &out_nor,\n               bool &out_xnor,\n               bool &out_anotb)"
+  },
+  {
+    "task_n": "Prob085",
+    "input": "Implement a Mealy machine 2's complementer in HLS\u2011C++ using one\u2011hot encoding and a synchronous active\u2011high reset. The state machine has two states, A and B; an input x and an output z. On a rising clock edge, if reset is asserted, the state returns to A. Otherwise, the state updates as follows:\n\n  A --x=0 (z=0)--> A\n  A --x=1 (z=1)--> B\n  B --x=0 (z=1)--> B\n  B --x=1 (z=0)--> B\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, bool x, bool &z)"
+  },
+  {
+    "task_n": "Prob086",
+    "input": "Design a one\u2011input, one\u2011output serial 2's complementer Moore state machine using HLS\u2011C++. The input x is provided one bit per clock cycle, beginning with the least\u2010significant bit of the number; the output z is the 2's complement of the input number.\n\nThe machine uses a synchronous active-high reset. Reset takes effect on the rising clock edge; conversion begins the cycle after reset is deasserted and stops the cycle reset is asserted.\n\nImplement the state machine as a Moore machine with three states (A, B, C) encoded as follows:\n\nState A (code 0): On a rising edge, if x is 1 then transition to state C; if x is 0 remain in state A.\nState B (code 1): On a rising edge, if x is 1 remain in state B; if x is 0 transition to state C.\nState C (code 2): On a rising edge, if x is 1 transition to state B; if x is 0 remain in state C.\n\nThe output z is defined as: z = 1 when the state is C, and 0 otherwise.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, bool x, bool &z)\n"
+  },
+  {
+    "task_n": "Prob087",
+    "input": "This is the simulation waveform of a combinational circuit. Read the simulation waveforms to determine what the circuit does, then implement it for HLS.\n\n  time            a               b               q\n  0ns             0               0               0\n  5ns             0               0               0\n  10ns            0               0               0\n  15ns            0               0               0\n  20ns            0               0               0\n  25ns            0               1               0\n  30ns            0               1               0\n  35ns            1               0               0\n  40ns            1               0               0\n  45ns            1               1               1\n  50ns            1               1               1\n  55ns            0               0               0\n  60ns            0               0               0\n  65ns            0               1               0\n  70ns            0               1               0\n  75ns            1               0               0\n  80ns            1               0               0\n  85ns            1               1               1\n  90ns            1               1               1\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool a, bool b, bool &q)"
+  },
+  {
+    "task_n": "Prob088",
+    "input": "Consider the state machine shown below:\n\n  A (0) --1--> B\n  A (0) --0--> A\n  B (0) --1--> C\n  B (0) --0--> D\n  C (0) --1--> E\n  C (0) --0--> D\n  D (0) --1--> F\n  D (0) --0--> A\n  E (1) --1--> E\n  E (1) --0--> D\n  F (1) --1--> C\n  F (1) --0--> D\n\nImplement a combinational circuit in HLS\u2011C++ that accepts:\n\nA 6\u2011bit input y (one\u2011hot encoded with state assignment:\nA = 000001, B = 000010, C = 000100, D = 001000, E = 010000, F = 100000)\n\nA 1\u2011bit input w and generates two outputs Y1 and Y3 as follows:\n\nY1 is the input of state flip-flop y[1]\nY3 is the input of state flip-flop y[3]\n\nYour top\u2011level function should be called TopModule and have this prototype:\nvoid TopModule(ap_uint<6> y, ap_uint<1> w, ap_uint<1> &Y1, ap_uint<1> &Y3)"
+  },
+  {
+    "task_n": "Prob089",
+    "input": "Implement a combinational circuit in HLS\u2011C++ with the following specification. You are given a 100\u2011bit input vector in (from in[99] down to in[0]). The circuit computes three output vectors as follows:\n\nout_both (99 bits): For every bit index 0 \u2264 i \u2264 98, out_both[i] is 1 if both in[i] and its neighbour to the left in[i+1] are 1. (Since in[99] has no left neighbour, out_both[99] is not required.)\n\nout_any (99 bits): The output is a 99-bit vector indexed 0 to 98. For every bit index 0 \u2264 i \u2264 98, out_any[i] is 1 if either in[i] or in[i+1] is 1. Equivalently, out_any[i] = in[i] | in[i+1].\n\nout_different (100 bits): For every bit index i (0 \u2264 i \u2264 99) the output is the XOR of in[i] and its neighbour to the left, with wrapping around (i.e. for i = 99 use in[0] as its neighbour).\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<100> in, \n               ap_uint<99> &out_both, \n               ap_uint<99> &out_any, \n               ap_uint<100> &out_different)"
+  },
+  {
+    "task_n": "Prob090",
+    "input": "For the following Karnaugh map, give the circuit implementation using one 4-to-1 multiplexer and as many 2-to-1 multiplexers as required, but using as few as possible. You are not allowed to use any other logic gate and you must use _a_ and _b_ as the multiplexer selector inputs, as shown on the 4-to-1 multiplexer below.\n\n      ab\n  cd  00  01  11  10\n  00 | 0 | 0 | 0 | 1 |\n  01 | 1 | 0 | 0 | 0 |\n  11 | 1 | 0 | 1 | 1 |\n  10 | 1 | 0 | 0 | 1 |\n\nImplement a circuit in HLS with one bit inputs 'c' and 'd'. There will be four outputs, mux_in[3:0], that connect to a four input mux. The mux takes as input {a,b} and ab =\n00 is connected to mux_in[0], ab=01 is connected to mux_in[1], and so on.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool c, bool d, ap_uint<4> &mux_in)"
+  },
+  {
+    "task_n": "Prob091",
+    "input": "You are given a four-bit input vector in. We want to know some relationships between each bit and its neighbour:\n\nImplement a circuit in HLS that operates on a 4\u2011bit input vector in and produces three outputs as follows:\n\n  (1) out_both (3 bits): Each bit of this output vector should indicate whether both the corresponding input bit and its neighbour to the left (higher index) are '1'. For example, out_both[2] should indicate if in[2] and in[3] are both 1. Since in[3] has no neighbour to the left, the answer is obvious so we don't need to know out_both[3].\n\n  (2) out_any (3 bits): Each bit of this output vector should indicate whether any of the corresponding input bit and its neighbour to the left (higher index) are '1'. For example, out_any[2] should indicate if either in[2] or in[3] are 1. Since in[3] has no neighbour to the left, the answer is obvious so we don't need to know out_any[3].\n\n  (3) out_different: Each bit of this output vector should indicate whether the corresponding input bit is different from its neighbour to the left. For example, out_different[2] should indicate if in[2] is different from in[3]. For this part, treat the vector as wrapping around, so in[3]'s neighbour to the left is in[0].\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<4> in, \n               ap_uint<3> &out_both, \n               ap_uint<3> &out_any, \n               ap_uint<4> &out_different)\n"
+  },
+  {
+    "task_n": "Prob092",
+    "input": "Implement an FSM for controlling a shift register in HLS\u2011C++. This module enables a shift register for exactly 4 clock cycles when a synchronous active\u2011high reset is applied. When reset is asserted on the rising clock edge, the FSM enters state B0 and shift_ena is asserted for 4 consecutive clock cycles (states B0, B1, B2, B3); after these 4 cycles, the FSM enters the Done state and shift_ena remains 0 until the next reset.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, bool &shift_ena)"
+  },
+  {
+    "task_n": "Prob093",
+    "input": "Build a finite-state machine that searches for the sequence 1101 in an input bit stream. When the sequence is found, it should set start_shifting to 1, forever, until reset. Reset is synchronous active\u2011high; on the rising edge when reset is 1, the FSM returns to the initial state.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, bool data, bool &start_shifting)"
+  },
+  {
+    "task_n": "Prob094",
+    "input": "Implement a 16\u2011bit wide, 9\u2011to\u20111 multiplexer. The multiplexer has nine 16\u2011bit inputs (named a through i), a 4\u2011bit selector sel and a 16-bit output out. When:\n\nsel = 0, output = a\nsel = 1, output = b\nsel = 2, output = c\nsel = 3, output = d\nsel = 4, output = e\nsel = 5, output = f\nsel = 6, output = g\nsel = 7, output = h\nsel = 8, output = i\nFor any other sel value all 16 output bits are set to '1'. \n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<16> a,\n               ap_uint<16> b,\n               ap_uint<16> c,\n               ap_uint<16> d,\n               ap_uint<16> e,\n               ap_uint<16> f,\n               ap_uint<16> g,\n               ap_uint<16> h,\n               ap_uint<16> i,\n               ap_uint<4> sel,\n               ap_uint<16> &out);"
+  },
+  {
+    "task_n": "Prob095",
+    "input": "This is a sequential circuit with input a and output q. Read the simulation waveforms to determine what the circuit does, then implement it.\n\n  time  clk a   q\n  0ns   0   x   x\n  5ns   1   0   x\n  10ns  0   0   x\n  15ns  1   0   1\n  20ns  0   0   1\n  25ns  1   0   1\n  30ns  0   0   1\n  35ns  1   1   1\n  40ns  0   1   1\n  45ns  1   1   0\n  50ns  0   1   0\n  55ns  1   1   0\n  60ns  0   1   0\n  65ns  1   1   0\n  70ns  0   1   0\n  75ns  1   1   0\n  80ns  0   1   0\n  85ns  1   1   0\n  90ns  0   1   0\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool a, bool &q)\n"
+  },
+  {
+    "task_n": "Prob096",
+    "input": "Consider the state machine shown below:\n\n  A (0) --0--> B\n  A (0) --1--> A\n  B (0) --0--> C\n  B (0) --1--> D\n  C (0) --0--> E\n  C (0) --1--> D\n  D (0) --0--> F\n  D (0) --1--> A\n  E (1) --0--> E\n  E (1) --1--> D\n  F (1) --0--> C\n  F (1) --1--> D\n\nResets into state A. For this part, assume that a one-hot code is used with the state assignment y[6] = 000001, 000010, 000100, 001000, 010000, 100000 for states A, B,..., F, respectively.\n\nImplement a circuit for the next-state signals Y2 and Y4 corresponding to signal y[1] and y[3]. Derive the logic equations by inspection assuming a one-hot encoding.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<6> y, bool w, bool &Y2, bool &Y4)"
+  },
+  {
+    "task_n": "Prob097",
+    "input": "The following is the state transition table for a Moore state machine with one input (in), one output (out), and four states. Use the following state encoding: A=2'b00, B=2'b01, C=2'b10, D=2'b11. Implement only the state transition logic and output logic (the combinational logic portion) for this state machine. Given the current state (state), compute the next_state and output (out) based on the state transition table.\n\n  State | Next state in=0, Next state in=1 | Output\n  A     | A, B                             | 0\n  B     | C, B                             | 0\n  C     | A, D                             | 0\n  D     | C, B                             | 1\n\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool in, ap_uint<2> state, ap_uint<2> &next_state, bool &out)"
+  },
+  {
+    "task_n": "Prob098",
+    "input": "This is a combinational circuit. Read the simulation waveforms to determine what the circuit does, then implement it in HLS.\n\n  time  a  b  c  d  q\n  0ns   0  0  0  0  0\n  5ns   0  0  0  0  0\n  10ns  0  0  0  0  0\n  15ns  0  0  0  0  0\n  20ns  0  0  0  1  0\n  25ns  0  0  1  0  1\n  30ns  0  0  1  1  1\n  35ns  0  1  0  0  1\n  40ns  0  1  0  1  1\n  45ns  0  1  1  0  1\n  50ns  0  1  1  1  1\n  55ns  1  0  0  0  0\n  60ns  1  0  0  1  0\n  65ns  1  0  1  0  1\n  70ns  1  0  1  1  1\n  75ns  1  1  0  0  1\n  80ns  1  1  0  1  1\n  85ns  1  1  1  0  1\n  90ns  1  1  1  1  1\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool a, bool b, bool c, bool d, bool &q)"
+  },
+  {
+    "task_n": "Prob099",
+    "input": "This is a combinational circuit. Read the simulation waveforms to determine what the circuit does, then implement it.\n\n  time  a  b  c  d  q\n  0ns   0  0  0  0  0\n  5ns   0  0  0  0  0\n  10ns  0  0  0  0  0\n  15ns  0  0  0  0  0\n  20ns  0  0  0  1  0\n  25ns  0  0  1  0  0\n  30ns  0  0  1  1  0\n  35ns  0  1  0  0  0\n  40ns  0  1  0  1  1\n  45ns  0  1  1  0  1\n  50ns  0  1  1  1  1\n  55ns  1  0  0  0  0\n  60ns  1  0  0  1  1\n  65ns  1  0  1  0  1\n  70ns  1  0  1  1  1\n  75ns  1  1  0  0  0\n  80ns  1  1  0  1  1\n  85ns  1  1  1  0  1\n  90ns  1  1  1  1  1\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool a, bool b, bool c, bool d, bool &q)"
+  },
+  {
+    "task_n": "Prob100",
+    "input": "This is a combinational circuit. Read the simulation waveforms to determine what the circuit does, then implement it for HLS.\n\n  time  a  b  c  d  q\n  0ns   0  0  0  0  1\n  5ns   0  0  0  0  1\n  10ns  0  0  0  0  1\n  15ns  0  0  0  0  1\n  20ns  0  0  0  1  0\n  25ns  0  0  1  0  0\n  30ns  0  0  1  1  1\n  35ns  0  1  0  0  0\n  40ns  0  1  0  1  1\n  45ns  0  1  1  0  1\n  50ns  0  1  1  1  0\n  55ns  1  0  0  0  0\n  60ns  1  0  0  1  1\n  65ns  1  0  1  0  1\n  70ns  1  0  1  1  0\n  75ns  1  1  0  0  1\n  80ns  1  1  0  1  0\n  85ns  1  1  1  0  0\n  90ns  1  1  1  1  1\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<1> a, ap_uint<1> b, ap_uint<1> c, ap_uint<1> d, ap_uint<1> &q);\n"
+  },
+  {
+    "task_n": "Prob101",
+    "input": "Build a 100-bit left/right rotator, with synchronous load and left/right enable. A rotator shifts-in the shifted-out bit from the other end of the register, unlike a shifter that discards the shifted-out bit and shifts in a zero. If enabled, a rotator rotates the bits around and does not modify/discard them.\n\n  (1) load: Loads shift register with data[100] instead of rotating.\n      Synchronous active high.\n\n  (2) ena[2]: Synchronous. Chooses whether and which direction to\n      rotate:\n      (a) 2'b01 rotates right by one bit,\n      (b) 2'b10 rotates left by one bit,\n      (c) 2'b00 and 2'b11 do not rotate.\n\n  (3) q: The contents of the rotator (Output).\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool load, ap_uint<2> ena, ap_uint<100> data, ap_uint<100> &q)"
+  },
+  {
+    "task_n": "Prob102",
+    "input": "Suppose you're building a circuit to process scancodes from a PS/2 keyboard for a game. Given the last two bytes of scancodes received, you need to indicate whether one of the arrow keys on the keyboard have been pressed. This involves a fairly simple mapping, which can be implemented as a case statement (or if-elseif) with four cases.\n\n  Scancode(16-bit) | Arrow key\n  0xE06B           | left arrow\n  0xE072           | down arrow\n  0xE074           | right arrow\n  0xE075           | up arrow\n  Anything else    | none\n\nYour circuit has one 16-bit input (scancode), and four outputs (left, down, right, up). Build this circuit that recognizes these four scancodes and asserts the correct output.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<16> scancode, bool &left, bool &down, bool &right, bool &up)"
+  },
+  {
+    "task_n": "Prob103",
+    "input": "Implement a Moore state machine (combinational portion only) with one 1-bit input in, one 1-bit output out, and a 1-bit current state signal state. The state machine is defined by the following:\n\n  B (out=1) --in=0--> A\n  B (out=1) --in=1--> B\n  A (out=0) --in=0--> B\n  A (out=0) --in=1--> A\n\nSynchronous reset is active high and forces the state to B. Write the function that computes the next-state and output given the current state and input.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool in, bool state, bool reset, bool &next_state, bool &out)\n"
+  },
+  {
+    "task_n": "Prob104",
+    "input": "Rule 90 is a one-dimensional cellular automaton with interesting properties. The rules are simple. There is a one-dimensional array of cells (on or off). At each time step, the next state of each cell is the XOR of the cell's two current neighbours:\n\n  Left | Center | Right | Center's next state\n  1    | 1      | 1     | 0\n  1    | 1      | 0     | 1\n  1    | 0      | 1     | 0\n  1    | 0      | 0     | 1\n  0    | 1      | 1     | 1\n  0    | 1      | 0     | 0\n  0    | 0      | 1     | 1\n  0    | 0      | 0     | 0\n\nIn this circuit, create a 512-cell system (q[512]), and advance by one time step each clock cycle. The load input indicates the state of the system should be loaded with data[512]. Assume the boundaries (q[-1] and q[512]) are both zero (off).\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool load, ap_uint<512> data, ap_uint<512> &q)"
+  },
+  {
+    "task_n": "Prob105",
+    "input": "Implement the combinational (next-state and output) logic of a Moore state machine with one 1-bit current state input state, one 1-bit input in, one 1-bit reset input areset (active high), one 1-bit next-state output next_state, and one 1-bit output out. The state machine has two states, with the following behavior:\n\n  B (1) --0--> A\n  B (1) --1--> B\n  A (0) --0--> B\n  A (0) --1--> A\n\nIf areset is asserted (active high) then next_state is forced to B and out is 1.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool state, bool in, bool areset, bool &next_state, bool &out)\n"
+  },
+  {
+    "task_n": "Prob106",
+    "input": "This is a Moore state machine with two states, two inputs, and one output. Implement this state machine in for HLS. Reset is an active-high synchronous reset to state OFF. The machine has the following behavior:\n\n  OFF (out=0) --j=0--> OFF\n  OFF (out=0) --j=1--> ON\n  ON  (out=1) --k=0--> ON\n  ON  (out=1) --k=1--> OFF\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool j, bool k, bool reset, bool &out)"
+  },
+  {
+    "task_n": "Prob107",
+    "input": "This is a Moore state machine with two states, two inputs, and one output. Implement this state machine in HLS. Reset is an active-high synchronous reset to state OFF. The state machine's behavior is:\n\n  OFF (out=0) --j=0--> OFF\n  OFF (out=0) --j=1--> ON\n  ON  (out=1) --k=0--> ON\n  ON  (out=1) --k=1--> OFF\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool j, bool k, bool reset, bool &out)"
+  },
+  {
+    "task_n": "Prob108",
+    "input": "A priority encoder is a combinational circuit that, when given an input bit vector, outputs the position of the first 1 bit in the vector. For example, a 8-bit priority encoder given the input 8'b10010000 would output 3'd4, because bit[4] is first bit that is high. Build a 4-bit priority encoder. For this problem, if none of the input bits are high (i.e., input is zero), output zero. The circuit has one 4\u2011bit input in and one 2\u2011bit output pos. Note that a 4-bit number has 16 possible combinations.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<4> in, ap_uint<2> &pos)"
+  },
+  {
+    "task_n": "Prob109",
+    "input": "Consider the function f shown in the Karnaugh map below. Implement this function for HLS.\n\n           x[3]x[4]\nx[1]x[2]   00  01  11  10\n   00     |  1 |  0 |  0 |  1 |\n   01     |  0 |  0 |  0 |  0 |\n   11     |  1 |  1 |  1 |  0 |\n   10     |  1 |  1 |  0 |  1 |\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<4> x, ap_uint<1> &f)"
+  },
+  {
+    "task_n": "Prob110",
+    "input": "Implement a combinational circuit in HLS that decodes 8\u2011bit keyboard scancodes for keys 0 through 9. The circuit has one 8\u2011bit input signal code and two outputs:\n\n\tA 4\u2011bit output (out), which encodes the recognized key number (0 through 9).\n\tA 1\u2011bit output (valid) that is high when one of the ten scancodes is recognized.\n\nThe mapping is as follows:\n\nscancode(hex)\tKey(out)\n0x45\t\t\t0\n0x16\t\t\t1\n0x1e\t\t\t2\n0x26\t\t\t3\n0x25\t\t\t4\n0x2e\t\t\t5\n0x36\t\t\t6\n0x3d\t\t\t7\n0x3e\t\t\t8\n0x46\t\t\t9\n\nFor any other input, the circuit must output out = 0 and valid = 0.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<8> code, ap_uint<4> &out, bool &valid)"
+  },
+  {
+    "task_n": "Prob111",
+    "input": "Build a 64-bit arithmetic shift register, with synchronous load. The shifter can shift both left and right, and by 1 or 8 bit positions, selected by \"amount.\" Assume the right shit is an arithmetic right shift.\n\nSignals are defined as below:\n  (1) load: On the rising edge of the clock, if load is asserted (active high), the register is loaded with the 64\u2011bit input (data).\n  (2) ena: Chooses whether to shift. Active high.\n  (3) amount: Chooses which direction and how much to shift.\n      (a) 2'b00: shift left by 1 bit (insert 0 at LSB).\n      (b) 2'b01: shift left by 8 bits.\n      (c) 2'b10: shift right by 1 bit using arithmetic right shift (i.e. replicate the MSB).\n      (d) 2'b11: shift right by 8 bits using arithmetic right shift.\n  (4) q: The contents of the shifter (output).\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool load, bool ena, ap_uint<2> amount, ap_uint<64> data, ap_uint<64> &q)\n"
+  },
+  {
+    "task_n": "Prob112",
+    "input": "Consider the function f shown in the Karnaugh map below. d is don't-care, which means you may choose to output whatever value is convenient. Implement this function.\n\n                x[1]x[2]\n  x[3]x[4]   00  01  11  10\n        00 | d | 0 | d | d |\n        01 | 0 | d | 1 | 0 |\n        11 | 1 | 1 | d | d |\n        10 | 1 | 1 | 0 | d |\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<4> x, ap_uint<1> &f)"
+  },
+  {
+    "task_n": "Prob113",
+    "input": "This is a sequential circuit. Read the simulation waveforms to determine what the circuit does, then implement it.\n\n  time  clk a   q\n  0ns   0   1   x\n  5ns   1   1   4\n  10ns  0   1   4\n  15ns  1   1   4\n  20ns  0   1   4\n  25ns  1   1   4\n  30ns  0   1   4\n  35ns  1   1   4\n  40ns  0   1   4\n  45ns  1   0   4\n  50ns  0   0   4\n  55ns  1   0   5\n  60ns  0   0   5\n  65ns  1   0   6\n  70ns  0   0   6\n  75ns  1   0   0\n  80ns  0   0   0\n  85ns  1   0   1\n  90ns  0   0   1\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool a, ap_uint<3> &q)\n"
+  },
+  {
+    "task_n": "Prob114",
+    "input": "Build a 32-bit global history shift register, including support for rolling back state in response to a pipeline flush caused by a branch misprediction. When a branch prediction is made (predict_valid = 1), shift in predict_taken from the LSB side to update the branch history for the predicted branch. (predict_history[0] is the direction of the youngest branch.) When a branch misprediction occurs (train_mispredicted = 1), load the branch history register with the history after the completion of the mispredicted branch. This is the history before the mispredicted branch (train_history) concatenated with the actual result of the branch (train_taken). If both a prediction and misprediction occur at the same time, the misprediction takes precedence, because the pipeline flush will also flush out the branch that is currently making a prediction. predict_history is the value of the branch history register. reset is a synchronous active-high reset that resets the history register to zero on the rising clock edge.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset,\n               bool predict_valid,\n               bool predict_taken,\n               ap_uint<32> &predict_history,\n               bool train_mispredicted,\n               bool train_taken,\n               ap_uint<32> train_history)\n"
+  },
+  {
+    "task_n": "Prob115",
+    "input": "Implement a Moore finite state machine with one input, one output, and four states (A, B, C, D). The FSM has a synchronous active-high reset that resets to state A on the rising clock edge. Each call to TopModule represents one rising clock edge.\n\nState transition table:\n\n  state | next state (in=0) | next state (in=1) | output\n  A     | A                 | B                 | 0\n  B     | C                 | B                 | 0\n  C     | A                 | D                 | 0\n  D     | C                 | B                 | 1\n\nOutput is 1 only in state D; 0 in all other states.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<1> in, ap_uint<1> reset, ap_uint<1> &out)"
+  },
+  {
+    "task_n": "Prob116",
+    "input": "The following is the state transition table for a Moore state machine with one input, one output, and four states. Implement this state machine. Include a synchronous active high reset that resets the FSM to state A.\n\n  State | Next state in=0, Next state in=1 | Output\n  A     | A, B                             | 0\n  B     | C, B                             | 0\n  C     | A, D                             | 0\n  D     | C, B                             | 1\n\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool in, bool reset, bool &out)\n"
+  },
+  {
+    "task_n": "Prob117",
+    "input": "Given the state-assigned table shown below, implement the finite-state machine. Reset is synchronous, active-high, and resets the FSM to state 000.\n\n  Present state y[2:0] | Next state y[2:0] x=0, Next state y[2:0] x=1 | Output z\n  000 | 000, 001 | 0\n  001 | 001, 100 | 0\n  010 | 010, 001 | 0\n  011 | 001, 010 | 1\n  100 | 011, 100 | 1\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, bool x, bool &z)\n"
+  },
+  {
+    "task_n": "Prob118",
+    "input": "Implement a combinational circuit that realizes the function defined by the following Karnaugh map. The circuit has four single\u2011bit inputs (a, b, c, d) and one single\u2011bit output (f). The Karnaugh map is given as follows:\n\n            ab\n       00   01   11   10\ncd\n00     | 0 |  1 |  0 |  1 |\n01     | 1 |  0 |  1 |  0 |\n11     | 0 |  1 |  0 |  1 |\n10     | 1 |  0 |  1 |  0 |\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<1> a, ap_uint<1> b, ap_uint<1> c, ap_uint<1> d, bool &f)"
+  },
+  {
+    "task_n": "Prob119",
+    "input": "The following adder-subtractor with zero flag doesn't work. Fix the bug(s).\n\n#include <ap_int.h>\n\nvoid TopModule(bool do_sub, ap_uint<8> a, ap_uint<8> b, ap_uint<8> &out, bool &result_is_zero) {\n#pragma HLS INLINE\n\n    if (do_sub == 0) {\n        out = a + b;\n    } else {\n        out = a - b;\n    }\n\n    if (~out) {\n        result_is_zero = 1;\n    } else {\n        result_is_zero = 0;\n    }\n}\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool do_sub, ap_uint<8> a, ap_uint<8> b, ap_uint<8> &out, bool &result_is_zero)"
+  },
+  {
+    "task_n": "Prob120",
+    "input": "Rule 110 is a one-dimensional cellular automaton with interesting properties (such as being Turing-complete). There is a one-dimensional array of cells (on or off). At each time step, the state of each cell changes. In Rule 110, the next state of each cell depends only on itself and its two neighbours, according to the following table:\n\n  Left | Center | Right | Center's next state\n  1    | 1      | 1     | 0\n  1    | 1      | 0     | 1\n  1    | 0      | 1     | 1\n  1    | 0      | 0     | 0\n  0    | 1      | 1     | 1\n  0    | 1      | 0     | 1\n  0    | 0      | 1     | 1\n  0    | 0      | 0     | 0\n\nThe 512-bit register q holds the cell states, with bit 0 at the right end and bit 511 at the left end. For cell i, the left neighbour is bit i+1 (higher index) and the right neighbour is bit i-1 (lower index).\n\nIn this circuit, create a 512-cell system (512-bit register named q), and advance by one time step each clock cycle. The synchronous active-high load input indicates the state of the system should be loaded with the 512-bit input (data) on that cycle; otherwise the automaton advances one step. The output q always reflects the current register state after the operation. Assume the boundaries (the left neighbour of bit 511 and the right neighbour of bit 0) are both zero (off).\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool load, ap_uint<512> data, ap_uint<512> &q)\n"
+  },
+  {
+    "task_n": "Prob121",
+    "input": "Implement the circuit described by the Karnaugh map below. x is don't-care in the k-map, which means you may choose to output whatever value is convenient. The four inputs (a, b, c, d) are interpreted as a 4\u2011bit value where \"a\" is the most\u2011significant bit and \"d\" is the least\u2011significant bit and \"out\" is the output.\n\n              ab\n   cd   01  00  10  11\n   00 | x | 0 | 1 | 1 |\n   01 | 0 | 0 | x | x |\n   11 | 0 | 1 | 1 | 1 |\n   10 | 0 | 1 | 1 | 1 |\n\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool a, bool b, bool c, bool d, bool & out)"
+  },
+  {
+    "task_n": "Prob122",
+    "input": "This is a combinational circuit. Read the simulation waveforms to determine what the circuit does, then implement it for HLS.\n\n  time  a     q\n  0ns   x     x\n  5ns   x     x\n  10ns  x     x\n  15ns  0  1232\n  20ns  1  aee0\n  25ns  2  27d4\n  30ns  3  5a0e\n  35ns  4  2066\n  40ns  5  64ce\n  45ns  6  c526\n  50ns  7  2f19\n  55ns  0  1232\n  60ns  1  aee0\n  65ns  2  27d4\n  70ns  4  2066\n  75ns  1  aee0\n  80ns  1  aee0\n  85ns  3  5a0e\n  90ns  5  64ce\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<3> a, ap_uint<16> & q)"
+  },
+  {
+    "task_n": "Prob123",
+    "input": "The game Lemmings involves critters with fairly simple brains. So simple that we are going to model it using a finite state machine. In the Lemmings' 2D world, a Lemming is always walking in one of two directions: left or right. When walking left, walk_left is 1 and walk_right is 0. When walking right, walk_right is 1 and walk_left is 0. The two outputs are always complementary.\n\nThe Lemming changes direction when it hits an obstacle:\n- If bumped on the left (bump_left=1), it switches to walking right.\n- If bumped on the right (bump_right=1), it switches to walking left.\n- If bumped on both sides simultaneously (bump_left=1 and bump_right=1), it still switches direction (away from its current direction).\n- If not bumped, it continues in the same direction.\n\nImplement this as a Moore finite state machine with two states (walk left, walk right) and two input signals (bump_left, bump_right). reset is a synchronous active-high reset that resets the Lemming to the walk-left state on the rising clock edge.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, bool bump_left, bool bump_right, bool & walk_left, bool & walk_right)\n"
+  },
+  {
+    "task_n": "Prob124",
+    "input": "The PS/2 mouse protocol sends messages that are three bytes long. However, within a continuous byte stream, it's not obvious where messages start and end. The only indication is that the first byte of each three byte message always has in[3]=1 (but in[3] of the other two bytes may be 1 or 0 depending on data). We want a finite state machine that will search for message boundaries when given an input byte stream. The algorithm we'll use is to discard bytes until we see one with in[3]=1. We then assume that this is byte 1 of a message, and signal the receipt of a message once all 3 bytes have been received (done). The FSM should signal done in the cycle immediately after the third byte of each message was successfully received. Reset should be active high synchronous.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<8> in, bool reset, bool & done)"
+  },
+  {
+    "task_n": "Prob125",
+    "input": "Implement a Mealy-type finite state machine (FSM) that detects the sequence \"101\" on a single-bit serial input x. The FSM has a single-bit output z that is asserted combinationally to 1 in the same cycle that the final bit of a \"101\" pattern is received (i.e., z depends on both the current state and the current input x). The FSM must support overlapping detection: the trailing \"1\" of one detected \"101\" may serve as the leading \"1\" of the next. Use exactly 3 states. The FSM has an active-low synchronous reset signal sresetn; when sresetn is low, the FSM returns to its initial state on the next rising clock edge. When sresetn is high, the FSM operates normally.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool sresetn, bool x, bool &z)"
+  },
+  {
+    "task_n": "Prob126",
+    "input": "This is a combinational circuit. The circuit has five 4-bit inputs (a, b, c, d, and e) and one 4-bit output q. Read the simulation waveforms to determine what the circuit does, then implement it.\n\n  time  a  b  c  d  e  q\n  0ns   x  x  x  x  x  x\n  5ns   x  x  x  x  x  x\n  10ns  x  x  x  x  x  x\n  15ns  a  b  0  d  e  b\n  20ns  a  b  1  d  e  e\n  25ns  a  b  2  d  e  a\n  30ns  a  b  3  d  e  d\n  35ns  a  b  4  d  e  f\n  40ns  a  b  5  d  e  f\n  45ns  a  b  6  d  e  f\n  50ns  a  b  7  d  e  f\n  55ns  a  b  8  d  e  f\n  60ns  a  b  9  d  e  f\n  65ns  a  b  a  d  e  f\n  70ns  a  b  b  d  e  f\n  75ns  a  b  c  d  e  f\n  80ns  a  b  d  d  e  f\n  85ns  a  b  e  d  e  f\n  90ns  a  b  f  d  e  f\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<4> a, ap_uint<4> b, ap_uint<4> c, ap_uint<4> d, ap_uint<4> e, ap_uint<4> & q)"
+  },
+  {
+    "task_n": "Prob127",
+    "input": "Module A implements the boolean function z = (x^y) & x.\n\nModule B can be described by the following simulation waveform:\n\n  time  x  y  z\n  0ns   0  0  1\n  5ns   0  0  1\n  10ns  0  0  1\n  15ns  0  0  1\n  20ns  0  0  1\n  25ns  1  0  0\n  30ns  1  0  0\n  35ns  0  1  0\n  40ns  0  1  0\n  45ns  1  1  1\n  50ns  1  1  1\n  55ns  0  0  1\n  60ns  0  1  0\n  65ns  0  1  0\n  70ns  1  1  1\n  75ns  0  1  0\n  80ns  0  1  0\n  85ns  0  1  0\n  90ns  1  0  0\n\nNow consider a top-level that uses two A submodules and two B submodules. The first input of all four submodules is connect to input 'x', and the second input of all four submodules is connected to 'y'. The output of the first A submodule is connected to a two-input OR, along with the output of the first B submodule. The second pair of A and B submodules is similarly connected to an AND gate. The output of the OR and the AND is\nconnected to an XOR, whose output is 'z'.\n\nImplement this circuit for HLS.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool x, bool y, bool &z)"
+  },
+  {
+    "task_n": "Prob128",
+    "input": "Consider a finite state machine with inputs s and w. Assume that the FSM begins in a reset state called A, as depicted below. The FSM remains in state A as long as s = 0, and it moves to state B when s = 1. Once in state B the FSM examines the value of the input w in the next three clock cycles. If w = 1 in exactly two of these clock cycles, then the FSM has to set an output z to 1 in the following clock cycle. Otherwise z has to be 0. The FSM continues checking w for the next three clock cycles, and so on. Use as few states as possible. Note that the s input is used only in state A, so you need to consider just the w input. Assume reset is active high synchronous.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, bool s, bool w, bool &z)"
+  },
+  {
+    "task_n": "Prob129",
+    "input": "Given the state-assigned table shown below, implement the logic functions Y[0] and z.\n\n   Present state input y(3-bit) | Next state Y(3-bit) when x=0, Next state Y(3-bit) when x=1 | Output z(1-bit)\n   000 | 000, 001 | 0\n   001 | 001, 100 | 0\n   010 | 010, 001 | 0\n   011 | 001, 010 | 1\n   100 | 011, 100 | 1\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<1> x, ap_uint<3> y, ap_uint<1> &Y0, ap_uint<1> &z)\n"
+  },
+  {
+    "task_n": "Prob130",
+    "input": "Consider the state machine shown below:\n\n  A (0) --0--> B\n  A (0) --1--> A\n  B (0) --0--> C\n  B (0) --1--> D\n  C (0) --0--> E\n  C (0) --1--> D\n  D (0) --0--> F\n  D (0) --1--> A\n  E (1) --0--> E\n  E (1) --1--> D\n  F (1) --0--> C\n  F (1) --1--> D\n\nAssume that you want to Implement the FSM using three flip-flops and state codes y[3-bit] = 000, 001, ..., 101 for states A, B, ..., F, respectively. Implement just the next-state logic for y[2] in HLS. The output Y2 is y[2].\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<3> y, ap_uint<1> w, ap_uint<1> &Y2)"
+  },
+  {
+    "task_n": "Prob131",
+    "input": "Implement the following six\u2011state FSM using three flip\u2011flops. State codes:\n  A=0 (000), B=1 (001), C=2 (010), D=3 (011), E=4 (100), F=5 (101).\n\n  A (0) --0--> B\n  A (0) --1--> A\n  B (0) --0--> C\n  B (0) --1--> D\n  C (0) --0--> E\n  C (0) --1--> D\n  D (0) --0--> F\n  D (0) --1--> A\n  E (1) --0--> E\n  E (1) --1--> D\n  F (1) --0--> C\n  F (1) --1--> D\n\nInput is w, output is z, and reset is synchronous active\u2011high.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, bool w, bool &z)\n"
+  },
+  {
+    "task_n": "Prob132",
+    "input": "In many (older) serial communications protocols, each data byte is sent along with a start bit and a stop bit, to help the receiver delimit bytes from the stream of bits. Implement a byte\u2011receiver FSM that looks for:\n  \u2022 A start bit (0),\n  \u2022 8 data bits (least significant first),\n  \u2022 A stop bit (1).\n\nWhen a full byte has been correctly framed (i.e. stop bit==1), assert `done` for one cycle. If the stop bit is 0, stay in an error state until `in` returns to 1 (the idle level) before looking for the next start bit.  Include a synchronous active\u2010high reset that returns the FSM to the START state.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool in, bool reset, bool &done)"
+  },
+  {
+    "task_n": "Prob133",
+    "input": "Implement the six\u2011state FSM below with synchronous active\u2011high reset. Input is w and output is z.\n\n    A(z=0): w=1--> B, w=0--> A\n    B(z=0): w=1--> C, w=0--> D\n    C(z=0): w=1--> E, w=0--> D\n    D(z=0): w=1--> F, w=0--> A\n    E(z=1): w=1--> E, w=0--> D\n    F(z=1): w=1--> C, w=0--> D\n\nReset synchronously returns the FSM to state A on the rising clock edge.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, bool w, bool &z)\n"
+  },
+  {
+    "task_n": "Prob134",
+    "input": "Consider a finite state machine that is used to control some type of motor. The FSM has inputs x and y, which come from the motor, and produces outputs f and g, which control the motor. There is also a reset input (synchronous, active low) called resetn. The FSM has to work as follows. As long as the reset input is asserted, the FSM stays in a beginning state, called state A. When the reset signal is de-asserted, then after the next clock edge the FSM has to set the output f to 1 for one clock cycle. Then, the FSM has to monitor the x input. When x has produced the values 1, 0, 1 in three successive clock cycles, then g should be set to 1. While maintaining g = 1 the FSM has to monitor the y input. If y has the value 1 within at most two clock cycles, then the FSM should maintain g = 1 permanently (that is, until reset). But if y does not become 1 within two clock cycles, then the FSM should set g = 0 permanently (until reset).\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool resetn, bool x, bool y, bool &f, bool &g)"
+  },
+  {
+    "task_n": "Prob135",
+    "input": "Synchronous HDLC framing involves decoding a continuous bit stream of data to look for bit patterns that indicate the beginning and end of frames (packets). Seeing exactly 6 consecutive 1s (i.e., 01111110) is a \"flag\" that indicate frame boundaries. To avoid the data stream from accidentally containing \"flags\", the sender inserts a zero after every 5\nconsecutive 1s which the receiver must detect and discard. We also need to signal an error if there are 7 or more consecutive 1s. Create a Moore-type finite state machine to recognize these three sequences:\n\n  (1) 0111110: Signal a bit needs to be discarded (Output disc).\n  (2) 01111110: Flag the beginning/end of a frame (Output flag).\n  (3) 01111111...: Error (7 or more 1s) (Output err).\n\nWhen the FSM is reset, it should be in a state that behaves as though the previous input were 0. The reset signal is active high synchronous. The output signals should be asserted for a complete cycle beginning on the clock cycle after the condition occurs.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, bool in, bool &disc, bool &flag, bool &err)\n"
+  },
+  {
+    "task_n": "Prob136",
+    "input": "Create a set of counters suitable for use as a 12-hour clock (with am/pm indicator). Your counters are clocked by a fast-running clk, with a pulse on ena whenever your clock should increment (i.e., once per second, while \"clk\" is much faster than once per second). The signal \"pm\" is asserted if the clock is PM, or is otherwise AM. hh, mm, and ss are two BCD (Binary- Coded Decimal) digits each for hours (01-12), minutes (00-59), and seconds (00-59). Reset is the active high synchronous signal that resets the clock to \"12:00 AM.\" Reset has higher priority than enable and can occur even when not enabled.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool reset, bool ena, bool &pm, ap_uint<8> &hh, ap_uint<8> &mm, ap_uint<8> &ss)"
+  },
+  {
+    "task_n": "Prob137",
+    "input": "The game Lemmings involves critters with fairly simple brains. So simple that we are going to model it using a finite state machine. In the Lemmings' 2D world, Lemmings can be in one of two states: walking left (walk_left is 1) or walking right (walk_right is 1). It will switch directions if it hits an obstacle. In particular, if a Lemming is bumped on the left (by receiving a 1 on bump_left), it will walk right. If it's bumped on the right (by receiving a 1 on bump_right), it will walk left. If it's bumped on both sides at the same time, it will still switch directions.\n\nIn addition to walking left and right and changing direction when bumped, when ground=0, the Lemming will fall and say \"aaah!\". When the ground reappears (ground=1), the Lemming will resume walking in the same direction as before the fall. Being bumped while falling does not affect the walking direction, and being bumped in the same cycle as ground disappears (but not yet falling), or when the ground reappears while still falling, also does not affect the walking direction.\n\nImplement a Moore state machine that models this behaviour. areset is a synchronous reset that resets the Lemming machine to walk left on the rising clock edge.\n\nThe top-level function should have the following prototype:\nvoid TopModule(\n    bool        areset,\n    bool        bump_left,\n    bool        bump_right,\n    bool        ground,\n    bool       &walk_left,\n    bool       &walk_right,\n    bool       &aaah\n)"
+  },
+  {
+    "task_n": "Prob138",
+    "input": "Given the following state machine with 1 input (in) and 2 outputs (out1, out2):\n\n  S0 (0, 0) --0--> S0\n  S0 (0, 0) --1--> S1\n  S1 (0, 0) --0--> S0\n  S1 (0, 0) --1--> S2\n  S2 (0, 0) --0--> S0\n  S2 (0, 0) --1--> S3\n  S3 (0, 0) --0--> S0\n  S3 (0, 0) --1--> S4\n  S4 (0, 0) --0--> S0\n  S4 (0, 0) --1--> S5\n  S5 (0, 0) --0--> S8\n  S5 (0, 0) --1--> S6\n  S6 (0, 0) --0--> S9\n  S6 (0, 0) --1--> S7\n  S7 (0, 1) --0--> S0\n  S7 (0, 1) --1--> S7\n  S8 (1, 0) --0--> S0\n  S8 (1, 0) --1--> S1\n  S9 (1, 1) --0--> S0\n  S9 (1, 1) --1--> S1\n\nSuppose this state machine uses one-hot encoding, where state[0] through state[9] correspond to the states S0 though S9, respectively. The outputs are zero unless otherwise specified.\n\nImplement the state transition logic and output logic portions of the state machine (but not the state flip-flops) for HLS. You are given the current state as input (state[10]) and must produce next state as output (next_state[10]) and the two outputs. Derive the logic equations by inspection assuming a one-hot encoding.\n\nThe top-level function should have the following prototype:\nvoid TopModule(\n  bool             in,\n  ap_uint<10>      state,\n  ap_uint<10>     &next_state,\n  bool            &out1,\n  bool            &out2\n);\n"
+  },
+  {
+    "task_n": "Prob139",
+    "input": "This is a sequential circuit. Read the simulation waveforms to determine what the circuit does, then implement it. Here, 'a' is the input and 'p' and 'q' are two outputs.\n\n  time   clock  a   p   q\n  0ns    0      0   x   x\n  5ns    0      0   x   x\n  10ns   0      0   x   x\n  15ns   0      0   x   x\n  20ns   0      0   x   x\n  25ns   1      0   0   x\n  30ns   1      0   0   x\n  35ns   1      0   0   x\n  40ns   1      0   0   x\n  45ns   1      0   0   x\n  50ns   1      0   0   x\n  55ns   0      0   0   0\n  60ns   0      0   0   0\n  65ns   0      0   0   0\n  70ns   0      1   0   0\n  75ns   0      0   0   0\n  80ns   0      1   0   0\n  85ns   1      0   0   0\n  90ns   1      1   1   0\n  95ns   1      0   0   0\n  100ns  1      1   1   0\n  105ns  1      0   0   0\n  110ns  1      1   1   0\n  115ns  0      0   1   1\n  120ns  0      1   1   1\n  125ns  0      0   1   1\n  130ns  0      1   1   1\n  135ns  0      0   1   1\n  140ns  0      0   1   1\n  145ns  1      0   0   1\n  150ns  1      0   0   1\n  155ns  1      0   0   1\n  160ns  1      0   0   1\n  165ns  1      1   1   1\n  170ns  1      0   0   1\n  175ns  0      1   0   0\n  180ns  0      0   0   0\n  185ns  0      1   0   0\n  190ns  0      0   0   0\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool a, bool &p, bool &q)\n"
+  },
+  {
+    "task_n": "Prob140",
+    "input": "In many (older) serial communications protocols, each data byte is sent along with a start bit and a stop bit, to help the receiver delimit bytes from the stream of bits. One common scheme is to use one start bit (0), 8 data bits, and 1 stop bit (1). The line is also at logic 1 when nothing is being transmitted (idle). Design a finite state machine that will identify when bytes have been correctly received when given a stream of bits. It needs to identify the start bit, wait for all 8 data bits, then verify that the stop bit was correct. The module will also output the correctly- received data byte. out_byte needs to be valid when done is 1, and is don't-care otherwise.If the stop bit does not appear when expected, the FSM must wait until it finds a stop bit before attempting to receive the next byte. Include a active-high synchronous reset. Note that the serial protocol sends the least significant bit first. It should assert done each time it finds a stop bit.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<1> in, ap_uint<1> reset, ap_uint<8> &out_byte, ap_uint<1> &done)"
+  },
+  {
+    "task_n": "Prob141",
+    "input": "This is a sequential circuit. The circuit consists of combinational logic and one bit of memory (i.e., one flip-flop). The output of the flip-flop has been made observable through the output state. Inputs: clk, a, b. Outputs: state, q.\n\nRead the simulation waveforms to determine what the circuit does, then implement it.\n\n  time            clk             a               b               state           q\n  0ns             0               1               x               x               x\n  5ns             1               1               x               x               x\n  10ns            0               0               0               x               x\n  15ns            1               0               0               0               0\n  20ns            0               0               0               0               0\n  25ns            1               0               0               0               0\n  30ns            0               0               0               0               0\n  35ns            1               0               0               0               0\n  40ns            0               0               0               0               0\n  45ns            1               0               1               0               1\n  50ns            0               0               1               0               1\n  55ns            1               1               0               0               1\n  60ns            0               1               0               0               1\n  65ns            1               1               1               0               0\n  70ns            0               1               1               0               0\n  75ns            1               0               0               1               1\n  80ns            0               0               0               1               1\n  85ns            1               1               1               0               0\n  90ns            0               1               1               0               0\n  95ns            1               1               1               1               1\n  100ns           0               1               1               1               1\n  105ns           1               1               1               1               1\n  110ns           0               1               1               1               1\n  115ns           1               1               0               1               0\n  120ns           0               1               0               1               0\n  125ns           1               0               1               1               0\n  130ns           0               0               1               1               0\n  135ns           1               0               0               1               1\n  140ns           0               0               0               1               1\n  145ns           1               0               0               0               0\n  150ns           0               0               0               0               0\n  155ns           1               0               0               0               0\n  160ns           0               0               0               0               0\n  165ns           1               0               0               0               0\n  170ns           0               0               0               0               0\n  175ns           1               0               0               0               0\n  180ns           0               0               0               0               0\n  185ns           1               0               0               0               0\n  190ns           0               0               0               0               0\n\nThe top-level function should have the following prototype:\nvoid TopModule(\n  bool a,\n  bool b,\n  bool &q,\n  bool &state\n)"
+  },
+  {
+    "task_n": "Prob142",
+    "input": "Consider the FSM described by the state diagram shown below:\n\n  A --r1=0,r2=0,r3=0--> A\n  A --r1=1--> B\n  A --r1=0,r2=1--> C\n  A --r1=0,r2=0,r3=1--> D\n  B (g1=1) --r1=1--> B\n  B (g1=1) --r1=0--> A\n  C (g2=1) --r2=1--> C\n  C (g2=1) --r2=0--> A\n  D (g3=1) --r3=1--> D\n  D (g3=1) --r3=0--> A\n\nResetn is an active-low synchronous reset that resets into state A. This FSM acts as an arbiter circuit, which controls access to some type of resource by three requesting devices. Each device makes its request for the resource by setting a signal _r[i]_ = 1, where _r[i]_ is either _r[1]_, _r[2]_, or _r[3]_. Each r[i] is an input signal to the FSM, and represents one of the three devices. The FSM stays in state _A_ as long as there are no requests. When one or more request occurs, then the FSM decides which device receives a grant to use the resource and changes to a state that sets that device's _g[i]_ signal to 1. Each _g[i]_ is an output from the FSM. There is a priority system, in that device 1 has a higher priority than device 2, and device 3 has the lowest priority. Hence, for example, device 3 will only receive a grant if it is the only device making a request when the FSM is in state _A_. Once a device, _i_, is given a grant by the FSM, that device continues to receive the grant as long as its request, _r[i]_ = 1.\n\nWrite complete HLS code that represents this FSM. Inputs: resetn, r. Outputs: g.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool resetn, ap_uint<3> r, ap_uint<3> &g)\n"
+  },
+  {
+    "task_n": "Prob143",
+    "input": "A large reservior of water serves several users. In order to keep the level of water succificently high, three sensors are placed vertically at 5-inch intervals. When the water level is above the highest sensor s[3], the input flow rate should be zero. When the level is below the lowest sensor s[1], the flow rate should be at maximum (both Nominal flow valve and Supplemental flow valve opened). The flow rate when the level is between the upper and lower sensors is determined by two factors: the water level and the level previous to the last sensor change. Each water level has a nominal flow rate associated with it as show in the table below. If the sensor change indicates that the previous level was lower than the current level, the flow rate should be increased by opening the Supplemental flow valve (controlled by dfr).\n\n  Water Level           | Sensors Asserted | Nominal Flow Rate Inputs to be Asserted\n  Above s[3]            | s[1], s[2], s[3] | None\n  Between s[3] and s[2] | s[1], s[2]       | fr1\n  Between s[2] and s[1] | s[1]             | fr1, fr2\n  Below s[1]            | None             | fr1, fr2, fr3\n\nAlso include an active-high synchronous reset that resets the state machine to a state equivalent to if the water level had been low for a long time (no sensors asserted, and all four outputs asserted).\n\nThe top-level function should have the following prototype:\nvoid TopModule(\n    bool        reset,\n    ap_uint<3>  s,      // s[0]=s1, s[1]=s2, s[2]=s3\n    bool       &fr3,\n    bool       &fr2,\n    bool       &fr1,\n    bool       &dfr\n)"
+  },
+  {
+    "task_n": "Prob144",
+    "input": "Given the following Moore state machine with 3 input (d, done_counting, ack) and 3 outputs (shift_ena, counting, done). Unless otherwise stated in the diagram below, assume outputs are 0 and inputs are don't cares.\n\nstate   (output)      --input--> next state\n-------------------------------------------\n  S     ()            --d=0--> S\n  S     ()            --d=1--> S1\n  S1    ()            --d=0--> S\n  S1    ()            --d=1--> S11\n  S11   ()            --d=0--> S110\n  S11   ()            --d=1--> S11\n  S110  ()            --d=0--> S\n  S110  ()            --d=1--> B0\n  B0    (shift_ena=1) --(always go to next cycle)--> B1\n  B1    (shift_ena=1) --(always go to next cycle)--> B2\n  B2    (shift_ena=1) --(always go to next cycle)--> B3\n  B3    (shift_ena=1) --(always go to next cycle)--> Count\n  Count (counting=1)  --done_counting=0--> Count\n  Count (counting=1)  --done_counting=1--> Wait\n  Wait  (done=1)      --ack=0--> Wait\n  Wait  (done=1)      --ack=1--> S\n\nAt reset, the state machine starts in state \"S\". Derive next-state logic equations and output logic equations by inspection assuming the following one-hot encoding is used: (S, S1, S11, S110, B0, B1, B2, B3, Count, Wait) = (10'b0000000001, 10'b0000000010, 10'b0000000100, ... , 10'b1000000000)\n\nDerive state transition and output logic equations by inspection assuming a one-hot encoding. Implement only the state transition logic and output logic (the combinational logic portion) for this state machine.\n\nWrite code that generates the following signals:\n\n - B3_next -- Assert when next-state is B3 state\n - S_next -- Assert when next-state is S state\n - S1_next -- Assert when next-state is S1 state\n - Count_next -- Assert when next-state is Count state\n - Wait_next -- Assert when next-state is Wait state\n - done -- output logic\n - counting -- output logic\n - shift_ena -- output logic\n\nThe top-level function should have the following prototype:\n#include <ap_int.h>\nvoid TopModule(\n    bool        d,\n    bool        done_counting,\n    bool        ack,\n    ap_uint<10> state,\n    bool       &B3_next,\n    bool       &S_next,\n    bool       &S1_next,\n    bool       &Count_next,\n    bool       &Wait_next,\n    bool       &done,\n    bool       &counting,\n    bool       &shift_ena\n)"
+  },
+  {
+    "task_n": "Prob145",
+    "input": "We want to create a timer that:\n\n  (1) is started when a particular pattern (1101) is detected,\n  (2) shifts in 4 more bits to determine the duration to delay,\n  (3) waits for the counters to finish counting, and\n  (4) notifies the user and waits for the user to acknowledge the timer.\n\nIn this problem, implement just the finite-state machine that controls the timer. The data path (counters and some comparators) are not included here.\n\nThe serial data is available on the data input pin. When the pattern 1101 is received, the state machine must then assert output shift_ena for exactly 4 clock cycles. After that, the state machine asserts its counting output to indicate it is waiting for the counters, and waits until input done_counting is high. At that point, the state machine must assert done to notify the user the timer has timed out, and waits until input ack is 1 before being reset to look for the next occurrence of the start sequence (1101). The state machine should  have a active high synchronous reset, setting the state to where it begins searching for the input sequence 1101.\n\nThe top-level function should have the following prototype:\nvoid TopModule(\n    bool        reset,\n    bool        data,\n    bool        done_counting,\n    bool        ack,\n    bool       &shift_ena,\n    bool       &counting,\n    bool       &done\n)"
+  },
+  {
+    "task_n": "Prob146",
+    "input": "The game Lemmings involves critters with fairly simple brains. So simplethat we are going to model it using a finite state machine. In the Lemmings' 2D world, Lemmings can be in one of two states: walking left (walk_left is 1) or walking right (walk_right is 1). It will switch directions if it hits an obstacle. In particular, if a Lemming is bumped on the left (by receiving a 1 on bump_left), it will walk right. If it's bumped on the right (by receiving a 1 on bump_right), it will walk left. If it's bumped on both sides at the same time, it will still switch directions.\n\nIn addition to walking left and right and changing direction when bumped, when ground=0, the Lemming will fall and say \"aaah!\". When the ground reappears (ground=1), the Lemming will resume walking in the same direction as before the fall. Being bumped while falling does not affect the walking direction, and being bumped in the same cycle as ground disappears (but not yet falling), or when the ground reappears while still falling, also does not affect the walking direction.\n\nIn addition to walking and falling, Lemmings can sometimes be told to do useful things, like dig (it starts digging when dig=1). A Lemming can dig if it is currently walking on ground (ground=1 and not falling), and will continue digging until it reaches the other side (ground=0). At that point, since there is no ground, it will fall (aaah!), then continue walking in its original direction once it hits ground again. As with falling, being bumped while digging has no effect, and being told to dig when falling or when there is no ground is ignored. (In other words, a walking Lemming can fall, dig, or switch directions. If more than one of these conditions are satisfied, fall has higher precedence than dig, which has higher precedence than switching directions.)\n\nImplement a Moore state machine that models this behaviour. reset is a synchronous reset that resets the Lemming machine to walk left on the rising clock edge.\n\nThe top-level function should have the following prototype:\n#include <ap_int.h>\nvoid TopModule(\n    bool    reset,\n    bool    bump_left,\n    bool    bump_right,\n    bool    ground,\n    bool    dig,\n    bool   &walk_left,\n    bool   &walk_right,\n    bool   &aaah,\n    bool   &digging\n)"
+  },
+  {
+    "task_n": "Prob147",
+    "input": "Build a gshare branch predictor with 7-bit pc and 7-bit global history, hashed (using xor) into a 7-bit index. This index accesses a 128-entry table of two-bit saturating counters. The branch predictor should contain a 7-bit global branch history register. The branch predictor has two sets of interfaces: One for doing predictions and one for doing training. The prediction interface is used in the processor's Fetch stage to ask the branch predictor for branch direction predictions for the instructions being fetched. Once these branches proceed down the pipeline and are executed, the true outcomes of the branches become known. The branch predictor is then trained using the actual branch direction outcomes.\n\nWhen a branch prediction is requested (predict_valid = 1) for a given pc, the branch predictor produces the predicted branch direction and state of the branch history register used to make the prediction. The branch history register is then updated (at the next positive clock edge) for the predicted branch.\n\nWhen training for a branch is requested (train_valid = 1), the branch predictor is told the pc and branch history register value for the branch that is being trained, as well as the actual branch outcome and whether the branch was a misprediction (needing a pipeline flush). Update the pattern history table (PHT) to train the branch predictor to predict this branch more accurately next time. In addition, if the branch being trained is mispredicted, also recover the branch history register to the state immediately after the mispredicting branch completes execution.\n\nIf training for a misprediction and a prediction (for a different, younger instruction) occurs in the same cycle, both operations will want to modify the branch history register. When this happens, training takes precedence, because the branch being predicted will be discarded anyway. If training and prediction of the same PHT entry happen at the same time, the prediction sees the PHT state before training because training only modifies the PHT at the next positive clock edge. The following timing diagram shows the timing when training and predicting PHT entry 0 at the same time. The training request at cycle 4 changes the PHT entry state in cycle 5, but the prediction request in cycle 4 outputs the PHT state at cycle 4, without considering the effect of the training request in cycle 4. Reset is synchronous active-high, taking effect on the rising clock edge.\n\nThe top-level function should have the following prototype:\nvoid TopModule(\n    bool        reset,\n    bool        predict_valid,\n    ap_uint<7>  predict_pc,\n    bool       &predict_taken,\n    ap_uint<7> &predict_history,\n    bool        train_valid,\n    bool        train_taken,\n    bool        train_mispredicted,\n    ap_uint<7>  train_history,\n    ap_uint<7>  train_pc\n)"
+  },
+  {
+    "task_n": "Prob148",
+    "input": "We want a finite state machine that will search for message boundaries when given an input byte stream. The algorithm we'll use is to discard bytes until we see one with in[3]=1. We then assume that this is byte 1 of a message, and signal the receipt of a message once all 3 bytes have been received (done). The FSM should signal done in the cycle immediately after the third byte of each message was successfully received.\n\nImplement the datapath module that will output the 24-bit (3 byte) message whenever a packet is received (out_bytes[23:16] is the first byte, out_bytes[15:8] is the second byte, etc.). The reset signal is active high synchronous. out_bytes needs to be valid whenever the done signal is asserted. You may output anything at other times (i.e., don't-care).\n\n  Waveform example:\n  time   clk rst in  done out_bytes\n  0ns    0   1    0  x         x\n  5ns    1   1    0  0         x\n  10ns   0   1    0  0         x\n  15ns   1   0   2c  0         x\n  20ns   0   0   2c  0         x\n  25ns   1   0   81  0         x\n  30ns   0   0   81  0         x\n  35ns   1   0    9  0         x\n  40ns   0   0    9  0         x\n  45ns   1   0   6b  1    2c8109\n  50ns   0   0   6b  1    2c8109\n  55ns   1   0    d  0         x\n  60ns   0   0    d  0         x\n  65ns   1   0   8d  0         x\n  70ns   0   0   8d  0         x\n  75ns   1   0   6d  1    6b0d8d\n  80ns   0   0   6d  1    6b0d8d\n  85ns   1   0   12  0         x\n  90ns   0   0   12  0         x\n  95ns   1   0    1  0         x\n  100ns  0   0    1  0         x\n  105ns  1   0    d  1    6d1201\n  110ns  0   0    d  1    6d1201\n  115ns  1   0   76  0         x\n  120ns  0   0   76  0         x\n  125ns  1   0   3d  0         x\n  130ns  0   0   3d  0         x\n  135ns  1   0   ed  1     d763d\n  140ns  0   0   ed  1     d763d\n  145ns  1   0   8c  0         x\n  150ns  0   0   8c  0         x\n  155ns  1   0   f9  0         x\n  160ns  0   0   f9  0         x\n  165ns  1   0   ce  1    ed8cf9\n  170ns  0   0   ce  1    ed8cf9\n  175ns  1   0   c5  0         x\n  180ns  0   0   c5  0         x\n  185ns  1   0   aa  0         x\n  190ns  0   0   aa  0         x\n\nThe top-level function should have the following prototype:\nvoid TopModule(\n    ap_uint<8>     in,\n    bool           reset,\n    ap_uint<24>   &out_bytes,\n    bool          &done\n)"
+  },
+  {
+    "task_n": "Prob149",
+    "input": "The game Lemmings involves critters with fairly simple brains. So simple that we are going to model it using a finite state machine. In the Lemmings' 2D world, Lemmings can be in one of two states: walking left (walk_left is 1) or walking right (walk_right is 1). It will switch directions if it hits an obstacle. In particular, if a Lemming is bumped on the left (by receiving a 1 on bump_left), it will walk right. If it's bumped on the right (by receiving a 1 on bump_right), it will walk left. If it's bumped on both sides at the same time, it will still switch directions.\n\nIn addition to walking left and right and changing direction when bumped, when ground=0, the Lemming will fall and say \"\"aaah!\"\". When the ground reappears (ground=1), the Lemming will resume walking in the same direction as before the fall. Being bumped while falling does not affect the walking direction, and being bumped in the same cycle as ground disappears (but not yet falling), or when the ground reappears while still falling, also does not affect the walking direction.\n\nIn addition to walking and falling, Lemmings can sometimes be told to do useful things, like dig (it starts digging when dig=1). A Lemming can dig if it is currently walking on ground (ground=1 and not falling), and will continue digging until it reaches the other side (ground=0). At that point, since there is no ground, it will fall (aaah!), then continue walking in its original direction once it hits ground again. As with falling, being bumped while digging has no effect, and being told to dig when falling or when there is no ground is ignored. (In other words, a walking Lemming can fall, dig, or switch directions. If more than one of these conditions are satisfied, fall has higher precedence than dig, which has higher precedence than switching directions.)\n\nAlthough Lemmings can walk, fall, and dig, Lemmings aren't invulnerable. If a Lemming falls for too long then hits the ground, it can splatter. In particular, if a Lemming falls for more than 20 clock cycles then hits the ground, it will splatter and cease walking, falling, or digging (all 4 outputs become 0), forever (Or until the FSM gets reset). There is no upper limit on how far a Lemming can fall before hitting the ground. Lemmings only splatter when hitting the ground; they do not splatter in mid-air.\n\nImplement a Moore state machine that models this behaviour. areset is a synchronous active-high reset that resets the Lemming machine to walk left on the rising clock edge.\n\nThe top-level function should have the following prototype:\nvoid TopModule(\n    bool        areset,\n    bool        bump_left,\n    bool        bump_right,\n    bool        ground,\n    bool        dig,\n    bool       &walk_left,\n    bool       &walk_right,\n    bool       &aaah,\n    bool       &digging\n)\n"
+  },
+  {
+    "task_n": "Prob150",
+    "input": "We want to create a timer with one input that:\n\n  (1) is started when a particular input pattern (1101) is detected,\n  (2) shifts in 4 more bits to determine the duration to delay,\n  (3) waits for the counters to finish counting, and\n  (4) notifies the user and waits for the user to acknowledge the timer.\n\nThe serial data is available on the data input pin. When the pattern 1101 is received, the circuit must then shift in the next 4 bits, most-significant-bit first. These 4 bits determine the duration of the timer delay, referred to as delay[3:0]. After that, the state machine asserts its counting output to indicate it is counting. Once the 1101 and delay[3:0] have been read, the circuit no longer looks at the data input until it resumes searching after everything else is done.\n\nThe state machine must count for exactly (delay[3:0] + 1) * 1000 clock cycles. e.g., delay=0 means count 1000 cycles, and delay=5 means count 6000 cycles. Also output the current remaining time. This should be equal to delay for 1000 cycles, then delay-1 for 1000 cycles, and so on until it is 0 for 1000 cycles.\n\nWhen the circuit isn't counting, the count[3:0] output is don't-care (whatever value is convenient for you to implement). At that point, the circuit must assert done to notify the user the timer has timed out, and waits until input ack is 1 before being reset to look for the next occurrence of the start sequence (1101).\n\nThe circuit should reset into a state where it begins searching for the input sequence 1101. The reset signal is active high synchronous.\n\nThe top-level function should have the following prototype:\nvoid TopModule(\n    bool reset,\n    bool data,\n    ap_uint<4> &count,\n    bool &counting,\n    bool &done,\n    bool ack\n)"
+  },
+  {
+    "task_n": "Prob151",
+    "input": "Design a 4-tap symmetric Finite Impulse Response (FIR) filter defined by:\n\u00a0\u00a0\u00a0\u00a0y[n] = h\u2080\u00b7x[n] + h\u2081\u00b7x[n\u22121] + h\u2082\u00b7x[n\u22122] + h\u2083\u00b7x[n\u22123]\n\nThe constant symmetric co-efficients are:\n\th = {0.30011,\u00a00.90032,\u00a00.90032,\u00a00.30011}\n\nThe circuit should processes one sample per clock cycle and produces a filtered output using a Multiply-Accumulate (MAC) operation on the current and previous three inputs.\nInput: sample_in\u00a0:\u00a0ap_fixed<8,1>\u2003(1\u00a0integer\u00a0+\u00a07\u00a0fractional bits, signed)\nOutput: sample_out\u00a0:\u00a0ap_fixed<19,4>\u2003(4\u00a0integer\u00a0+\u00a015\u00a0fractional bits, signed)\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_fixed<8,1> sample_in, ap_fixed<19,4> &sample_out)"
+  },
+  {
+    "task_n": "Prob152",
+    "input": "Create a 4\u2011tap FIR filter that uses the transposed architecture and lets the coefficients be supplied at run\u2011time. It takes one input sample and a coefficient array per clock cycle and produces the output. Internally, it uses a 4-stage delay line (regs) to store partial accumulation results. On each cycle, all four MAC operations are performed in parallel using fully unrolled logic, and the delay line is updated from back to front. The newest output is stored in the last register stage and assigned as the filter result. \n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_fixed<8,1>  sample_in, const ap_fixed<8,1> coeffs[4], ap_fixed<19,4> &sample_out)"
+  },
+  {
+    "task_n": "Prob153",
+    "input": "Design a module that implements a two-stage, decimating FIR filter in a single pipelined datapath, with a 4-phase scheduler that steers samples through stage-0 then stage-1 once every four clock cycles. Inputs are a new fixed-point sample x and a 4-tap coefficient array h[]; outputs are the filtered result y and a valid flag asserted whenever a new decimated output emerges.\n\nFor implementing the module, maintain a 2-bit phase counter that increments each clock and wraps every four cycles (values 0->1->2->3->0\u2026).\n\u2022 Phase 0:\n\tShift the new input x into a 4-deep buffer.\n\tDo a 4-tap dot-product with h[ ].\n\tToggle a flip-flop; when the flip-flop becomes true (odd-numbered toggle), latch that sum as y0.\n\u2022 Phases 1\u20132: idle.\n\u2022 Phase 3:\n\tIf y0 was just produced, shift it into a second 4-deep buffer.\n\tCompute another 4-tap dot-product with h[ ].\n\tToggle a second flip-flop; when the flip-flop becomes true (odd-numbered toggle), latch that sum as y and assert valid for one cycle.\n\nAll other times valid is low. This delivers one output y (with valid=1) for every four input samples x.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_fixed<8,1> x, const ap_fixed<8,1> h[4], ap_fixed<28,7> &y, bool &valid)"
+  },
+  {
+    "task_n": "Prob154",
+    "input": "Implement a four\u2011stage, on\u2011chip blocked matrix\u2011multiply engine that reads two input matrices from external memory, multiplies them in a fully pipelined and parallel fashion, and writes the result back out. Its control logic can be thought of as a small finite\u2011state machine that moves through the phases LOAD_A, LOAD_B, COMPUTE, and WRITE in sequence.\n\nIn the LOAD_A phase, the engine streams (size x size) words from the input pointer in1 into a local two\u2011dimensional buffer A. This brings the entire first matrix on chip so that the subsequent multiply operations can proceed at full internal bandwidth without further external memory accesses.\n\nNext, in the LOAD_B phase, it similarly reads (size x size) words from the second input pointer in2 into a local buffer B. B is partitioned completely along its row dimension, which prepares the design for fully concurrent access to one element from each row simultaneously (i.e., B[col][k] for all values of col at once) when computing dot\u2011products.\n\nOnce both matrices are resident on chip, the design enters the COMPUTE phase. It repeats rep_count independent rounds of the core matrix\u2011multiply operation (each round recomputes the same A\u00d7B product; this is a benchmarking/stress loop, not a mathematical chaining operation).\n\nFinally, in the WRITE phase, the module streams the completed (size x size) output buffer C back out to the pointer out_r in simple row\u2011major order. This returns the final matrix product to external memory so that the host can read it.\n\nThe top-level function should have the following prototype:\nvoid TopModule(int* in1, int* in2, int* out_r, int size, int rep_count)\n"
+  },
+  {
+    "task_n": "Prob155",
+    "input": "Write an HLS code that implements a 64\u2011point in\u2011place radix\u20112 decimation\u2011in\u2011time FFT in two distinct phases. First, it performs a bit\u2011reversal permutation on the input array. In hardware terms, this is a fixed, combinational addr\u00adess\u2011swapping network that reorders the 6\u2011bit address of each sample so that the natural index map is reversed bit\u2011wise.\n\nOnce the data are in bit\u2011reversed order, the design executes six sequential butterfly stages (since 2\u2076 = 64), each halving the processing \"distance\" between paired samples. At stage m (m from 1 to 6), the array is divided into groups of 2\u1d50 points. Within each group, pairs of values separated by 2\u1d50\u207b\u00b9 indices are combined by adding and subtracting a rotated version of the second sample\u2014the so\u2011called \"twiddle\" multiplication by e^(\u2013j2\u03c0k/2\u1d50). Conceptually, each butterfly computes:\n\n\tthe sum (u + v\u00b7W)\n\tthe difference (u \u2013 v\u00b7W)\n\nwhere W is the complex weight corresponding to the position k within the group. In hardware, each stage can be fully pipelined with an initiation interval of 1 and unrolled to process multiple butterflies in parallel, trading off resource usage and latency.\n\nThroughout, twiddle factors (cosine and sine terms) are generated on\u2011the\u2011fly in each stage by computing angle = \u20132\u03c0\u00b7k/length and then using CORDIC or lookup logic to produce the real and imaginary multipliers.\n\nThe top-level function should have the following prototype:\nvoid TopModule(std::complex<float> x[64])"
+  },
+  {
+    "task_n": "Prob156",
+    "input": "Design a module for HLS that implements a 2\u2011D convolution over an 8\u00d78 image using a fixed 5\u00d75 kernel of all ones. For each of the 8\u00d78 output pixels, the design slides a 5\u00d75 window centered at that pixel (treating out\u2011of\u2011bounds positions as zero), multiplies every valid sample in that window by the corresponding kernel entry (all ones), sums the results, and writes the sum to the corresponding position in the output. The input array is fully partitioned into individual registers, allowing all elements to be accessed simultaneously; with the inner kernel loops unrolled, the design achieves II=1 on the outer pixel-scan loops.\n\nThe top-level function should have the following prototype:\nvoid TopModule(const int input[8][8], int output[8][8])\n"
+  },
+  {
+    "task_n": "Prob157",
+    "input": "Implement classic 2\u2011D inverse discrete cosine transform (IDCT) on an 8\u00d78 block of frequency\u2011domain coefficients to reconstruct spatial\u2011domain pixels for HLS. The IDCT circuit takes each of the 64 frequency\u2011domain coefficients and, for every output pixel position (x,y), computes a weighted sum of all input[u][v] values. Each weight is the product of two cosine terms\u2014one for the row index and one for the column index\u2014together with a special 1/\u221a2 scaling when u or v is zero. Once all 64 products have been accumulated, the sum is multiplied by 1/4 to complete the normalization, yielding the reconstructed pixel value.\n\nThe top-level function should have the following prototype:\nvoid TopModule(const float input[8][8], float output[8][8])"
+  },
+  {
+    "task_n": "Prob158",
+    "input": "Implements a 4\u00d74 matrix inversion by performing Gauss\u2013Jordan elimination with partial pivoting on an augmented 4\u00d78 matrix ([A\u2006|\u2006I]).\n\nThe module first builds an augmented 4\u00d78 array by placing the input matrix on the left and the identity on the right. It then steps through four pivot positions: for each pivot column i, it scans rows i\u20133 to find the largest absolute entry, swaps that row into position i if needed, and scales the entire pivot row so that its leading element becomes 1.\n\nOnce the pivot row is normalized, the circuit subtracts suitable multiples of that row from every other row to zero out the i-th column. After repeating this \u201cfind-pivot, swap, normalize, eliminate\u201d sequence for all four columns, the left half has become the identity and the right half has become inv(A).\n\nThe top-level function should have the following prototype:\nvoid TopModule(const float in[4][4], float out[4][4])"
+  },
+  {
+    "task_n": "Prob159",
+    "input": "Design a classic PID control loop with a first-order filter on the derivative term. On every invocation, it either resets its internal state or computes a new control output based on the difference between the desired setpoint and the measurement value. When rst=1, all internal state registers and the output register are synchronously cleared to 0.\n\nInternally, the process unfolds as a small datapath of adders, multipliers, and registers: an accumulator for the I-term, a difference block for the D-term, a simple IIR filter on that difference, and registers to hold the previous error and filtered derivative. The final sum drives the control output.\n\nParameter values:\n\tKp = 1.0f\n\tKi = 0.1f\n\tKd = 0.01f\n\tN  = 10.0f   [derivative filter coefficient]\n\tdt = 0.01f   [sample period]\n\nThe design is pipelined with II=1, meaning it accepts one new sample per clock cycle. Due to floating-point operation latency, the actual output latency spans multiple cycles, but throughput remains one sample per cycle.\n\nThe top-level function should have the following prototype:\nvoid TopModule(bool rst, float setpoint, float measurement, float &control_out)\n"
+  },
+  {
+    "task_n": "Prob160",
+    "input": "A CRC-32 generator computes a 32-bit checksum known as a cyclic redundancy check over a block of data to detect accidental errors. Internally it treats the incoming bitstream as a polynomial over the finite field and divides it by a fixed 33-bit generator polynomial (for CRC-32, typically 0x04C11DB7 in normal form or 0xEDB88320 in reflected form). The 32-bit remainder of that division is the CRC code.\n\nImplement a CRC-32 generator for an input array (data) that carries the message over which the CRC is to be computed. The length port is a 32-bit unsigned input that tells the CRC unit how many bytes from the data array to process. It serves as a bound on the outer loop counter.\n\nThe top-level function should have the following prototype:\nvoid TopModule(const unsigned char data[256], unsigned int length, unsigned int      &crc_out)"
+  },
+  {
+    "task_n": "Prob161",
+    "input": "Implement an in-place, radix-2 Cooley\u2013Tukey FFT on an 8-point complex vector. It accepts two parallel arrays of length 8 one holding the real parts(XR) and one the imaginary parts(XI)and transforms them so that, when the function completes, those same arrays contain the frequency domain samples. The forward DFT uses the negative-exponent convention (twiddle factor e^{-j2*pi*k/N}). There will be no external handshaking: the entire computation is driven by the nested loops inside the function.\n\nConsider the following parameters:\nSIZE = 8         //Size of the vectors\ntypedef float DTYPE\n\nThe top-level function should have the following prototype:\nvoid TopModule(DTYPE XR[SIZE], DTYPE XI[SIZE])"
+  },
+  {
+    "task_n": "Prob162",
+    "input": "Perform an in-place Cholesky decomposition of an N\u00d7N symmetric positive-definite matrix A, replacing its storage with the lower-triangular factor L such that A = L\u00b7L\u1d40. Internally, it consists of three main phases:\n\t1. Take \u221aA\u2080\u2080 to form L\u2080\u2080, then divide every A\u1d62\u2080 (i=1\u2026N\u20131) by L\u2080\u2080 so that the first column of L is complete.\n\t2. Iterating over each diagonal element, compute the sum of squares of the already-computed L\u2c7c\u2096 (k<j). Subtract that from A\u2c7c\u2c7c and take the square root to get L\u2c7c\u2c7c. For each row i>j, subtract the dot-product of L\u1d62\u2080\u2026L\u1d62\u2c7c\u208b\u2081 with L\u2c7c\u2080\u2026L\u2c7c\u2c7c\u208b\u2081 from A\u1d62\u2c7c, then divide by L\u2c7c\u2c7c to produce L\u1d62\u2c7c.\n\t3. All updates overwrite the lower triangle of A with L so that, at the end, the original matrix A has been transformed in place into its Cholesky factor L, satisfying A = L\u00b7L\u1d40.\n\nThe top-level function should have the following prototype:\nvoid TopModule(int diagSize, double *matrixA)"
+  },
+  {
+    "task_n": "Prob163",
+    "input": "Montgomery modular exponentiation is an efficient way to compute (a\u1d47 mod m) by replacing the costly \u201cmod m\u201d operation in each multiplication with a sequence of additions and shifts, using Montgomery reduction.\n\nImplement a 8-bit(WIDTH) Montgomery modular exponentiation in HLS. For this, Choose a power-of-two base R = 2^WIDTH and compute R_mod = R mod m. Then transform both your base a and the initial value 1 into \u201cMontgomery form\u201d by multiplying each by R_mod modulo m. Then, scan the bits of the exponent b from most significant to least. On every bit:\n\tSquare the running result via a Montgomery multiply.\n\tIf the current bit is 1, multiply again by the Montgomery form a. \nAfter all bits are processed, perform one final Montgomery multiply by 1 to undo the Montgomery scaling and yield the true a\u1d47 mod m.\n\nThe top-level function should have the following prototype:\nvoid TopModule(\n    ap_uint<WIDTH> a,\n    ap_uint<WIDTH> b,\n    ap_uint<WIDTH> m,\n    ap_uint<WIDTH> mprime,\n    ap_uint<WIDTH> &result\n)\n#define WIDTH 8"
+  },
+  {
+    "task_n": "Prob164",
+    "input": "This module implements a two-step linear algebra pipeline in hardware: first it orthonormalizes a tall complex matrix via Modified Gram\u2013Schmidt QR decomposition, then it solves a linear system by back-substitution.\n\nThe dataflow can be described in five stages:\n1. Data Loading\nStream the input matrix Q (size row \u00d7 col) and vector b (length row) into on-chip buffers.\n\n2. Modified Gram-Schmidt QR Decomposition\nFor each column i of Q:\n\ta. Copy column i into a temp vector.\n\tb. For every prior column j<i:\n\t\t\u2022 Compute inner product \u27e8Q_j, temp\u27e9 \u2192 R[j][i]\n\t\t\u2022 Subtract that projection from temp.\n\tc. Compute \u2016temp\u2016 \u2192 R[i][i], then normalize temp by R[i][i] to form orthonormal Q_i.\n\n3. Forming the Transformed RHS \nFor each column i, compute b_tilde[i] = \u27e8conj(Q_i), b\u27e9 via a complex dot product.\n\n4. Back-Substitution Solve\nSolve R*x = b_tilde by iterating j from col\u20131 down to 0:\n\t\u2022 Subtract \u03a3_{k>j} R[j][k]*x[k] from b_tilde[j]\n\t\u2022 Divide by R[j][j] to get x[j].\n\n5. Output Streaming\nWrite the resulting vector x (length col) back out, one element per cycle.\n\nThe top-level function should have the following prototype:\nvoid TopModule(float32_t Qr_i[MAX_ROW*MAX_COL],\n               float32_t Qi_i[MAX_ROW*MAX_COL],\n               int col, int row,\n               float32_t br_i[MAX_ROW],\n               float32_t bi_i[MAX_ROW],\n               float32_t xr_o[MAX_COL],\n               float32_t xi_o[MAX_COL])\n\t\t\t   \n#define MAX_ROW   32\n#define MAX_COL   32\n\ntypedef float float32_t;"
+  },
+  {
+    "task_n": "Prob165",
+    "input": "Design a four-stage Gaussian pyramid generator on a 16\u00d716 input image, producing successively smaller, blurred versions at 8\u00d78, 4\u00d74, 2\u00d72, and 1\u00d71 resolutions. At each stage it performs two operations in lock-step:\n\t\u2022 3\u00d73 Gaussian blur on every 2\u00d72 block of the previous level, using clamped edge extension.\n\t\u2022 Down-sampling by 2 in both dimensions.\n\nProcess Flow:\n1. Input: a 16\u00d716 image buffer.\n\n2. Kernel: use a fixed 3\u00d73 Gaussian weight matrix [1 2 1; 2 4 2; 1 2 1] normalized by dividing the nine-sum by 16.\n\n3. Repeat for four levels:\n\t\u2022 Blur: for each output pixel, center the 3\u00d73 window on pixel (2y, 2x) of the current image (clamping edges), multiply\u2013accumulate with the kernel, then shift right by 4.\n\t\u2022 Downsample: keep only every second row and column (i.e. output(y,x) uses input(2y,2x) neighborhood).\n\n4. Outputs: 8\u00d78 at level 1, 4\u00d74 at level 2, 2\u00d72 at level 3, and 1\u00d71 at level 4.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_uint<8> in[HEIGHT][WIDTH],\n               ap_uint<8> out1[HEIGHT/2][WIDTH/2],\n               ap_uint<8> out2[HEIGHT/4][WIDTH/4],\n               ap_uint<8> out3[HEIGHT/8][WIDTH/8],\n               ap_uint<8> out4[HEIGHT/16][WIDTH/16])\n\n#define HEIGHT 16\n#define WIDTH  16\n"
+  },
+  {
+    "task_n": "Prob166",
+    "input": "You have to implement a hardware\u2010friendly, fully pipelined Secure Hash Algorithm (SHA-1) compression of a single 512-bit block (64 bytes) into a 160-bit digest. At a top\u2010level you can think of it as three major subunits: an input packing & padding unit, a message schedule generator, and an 80-round compression engine all orchestrated by a simple finite-state machine that steps through exactly 80 rounds and then finishes.\n\nThe design can be structured into four steps:\n1. Load & Pad\nGrab up to 64 bytes of input, append a single \u201c1\u201d bit and zeros if it\u2019s shorter, and tack the 64-bit message length onto the end packing everything into sixteen 32-bit words.\n\n2. Expand\nGrow those 16 words into 80 by repeatedly XORing four earlier words and rotating left by one bit, giving a new \u201cmessage\u201d word for each of 80 rounds.\n\n3. Mix\nKeep five 32-bit registers (A\u2013E). For each round you pick one of four simple Boolean functions and one of four constants based on the round number, then compute\n\tnewA = rotate_left(A,5) + f(B,C,D) + E + message_word + constant  \nand shift the registers down (D->E, C->D, rotate_left(B,30)->C, A->B, newA->A).\n\n4. Finalize\nAfter 80 mixes, add A\u2013E back into the original SHA-1 constants to form five output words (the 160-bit hash) and raise a \u201cvalid\u201d flag.\n\nThe top-level function should have the following prototype:\nvoid TopModule(\n    const BYTE   message[64],\n    ap_uint<32>  length,\n    WORD         digest_out[5],\n    bool        &valid\n)\n\ntypedef ap_uint<8>  BYTE;\ntypedef ap_uint<32> WORD;"
+  },
+  {
+    "task_n": "Prob167",
+    "input": "Implement a combinational HLS circuit that sorts eight 32-bit signed integers (in[8]) into ascending order using a simple compare and swap network (selection sort) and then writes the sorted values to out[8]. Finally,  it asserts a 1-bit flag (valid) high once the sort is complete.\n\nThe top-level function should have the following prototype:\nvoid TopModule(ap_int<32> in[8], ap_int<32> out[8], bool &valid)"
+  },
+  {
+    "task_n": "Prob168",
+    "input": "Implement a four stage statistical correlation kernel over a 100\u00d780 data matrix in HLS. The kernel follows these simple four-step pipeline over an M\u00d7N data matrix (here 100\u00d780):\n\n\t1. Mean: Sum each column's M samples and divide by the length (float_n) to get an N element mean vector.\n\t2. Std Dev with Guard: Compute each column's variance (mean-centered squared sum \u00f7 length), take the square root, and enforce a small minimum to avoid zeros.  This produces an 80-element stddev vector\n\t3. Normalize: Subtract the column mean and divide by (\u221alength \u00d7 std dev) so every column has zero mean and unit variance.\n\t4. Correlation: Form the N\u00d7N symmetric matrix (corr) by setting the diagonal to 1 and filling each off-diagonal entry with the dot product of the two normalized columns.\n\nThe top-level function should have the following prototype:\nvoid TopModule(double float_n,\n               double data[100][80],\n               double corr[80][80],\n               double mean[80],\n               double stddev[80])\n"
+  },
+  {
+    "task_n": "Prob169",
+    "input": "Implement an iterative Alternating Direction Implicit (ADI) solver in HLS. The kernel updates two n\u00d7n matrices (u and v) over tsteps time steps using two scratch matrices (p and q).\n\nInputs:\n\ttsteps (int): number of iterations\n\tn (int): grid size (n \u2264 60)\n\tu[60][60] (double): input/output matrix\n\tv[60][60] (double): input/output matrix\n\tp[60][60] (double): scratch matrix\n\tq[60][60] (double): scratch matrix\n\nOutputs:\n\tUpdated u and v in-place\n\tvalid (bool): high when all steps complete\n\nThe top-level function should have the following prototype:\nvoid TopModule(int tsteps,\n               int n,\n               double u[60][60],\n               double v[60][60],\n               double p[60][60],\n               double q[60][60],\n               bool   &valid)\n\nInside TopModule, perform exactly tsteps iterations of the following two sweeps:\n\t\u2022 Column sweep (for i=1\u2026n\u20132):\n\t\tInitialize boundary values\n\t\tForward solve to fill p[i][j] and q[i][j] (j=1\u2026n\u20132)\n\t\tBackward solve to update v[j][i]\n\n\t\u2022 Row sweep (for i=1\u2026n\u20132):\n\t\tLikewise, compute p[i][j], q[i][j] for j across columns\n\t\tBackward solve to update u[i][j]\n\t\tFinally, assert valid = true."
+  },
+  {
+    "task_n": "Prob170",
+    "input": "Implement a 2-D Finite-Difference Time-Domain (FDTD) kernel in HLS. The module updates three 200\u00d7240 field arrays (ex, ey, hz) over tmax time steps, using a 1-D \"fictitious\" boundary array _fict_ of length 100.\n\nInputs:\n\ttmax (int): number of time steps (\u2264100)\n\tnx, ny (int): grid dimensions (\u2264200, \u2264240)\n\tex[200][240], ey[200][240], hz[200][240] (double): electric & magnetic fields\n\t_fict_[100] (double): boundary values for ey[0][*]\n\nOutputs:\n\tUpdated ex, ey, and hz in place\n\tvalid (bool): high when all tmax steps finish\n\nAt each time step t from 0 to tmax\u20131, perform these updates:\n\t1. Set every element of the first row of ey to the corresponding entry from the _fict_ array (the \"fictitious\" boundary).\n\t2. For each cell below the first row, subtract half the difference between the magnetic field hz at that cell and the one immediately above.\n\t3. For each cell to the right of the first column, subtract half the difference between hz at that cell and its left neighbor.\n\t4. For every interior cell, subtract 0.7 times the sum of the change in ex to the right and the change in ey below (a discrete curl).\n\nAfter all steps, raise valid to indicate the fields ex, ey, and hz now hold the updated solution.\nUse this prototype:\n\nThe top-level function should have the following prototype:\nvoid TopModule(int    tmax,\n               int    nx,\n               int    ny,\n               double ex[200][240],\n               double ey[200][240],\n               double hz[200][240],\n               double _fict_[100],\n               bool   &valid)\n"
+  }
+]
