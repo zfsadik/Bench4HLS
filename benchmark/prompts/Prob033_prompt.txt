@@ -1,0 +1,4 @@
+Create a circuit that implements eight D flip‑flops. The circuit has an 8‑bit data input (d). On every rising clock edge, the flip‑flops capture the value of d and output it on an 8‑bit output (q).
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<8> d, ap_uint<8> &q)

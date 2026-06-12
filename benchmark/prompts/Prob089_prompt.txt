@@ -1,0 +1,13 @@
+Implement a combinational circuit in HLS‑C++ with the following specification. You are given a 100‑bit input vector in (from in[99] down to in[0]). The circuit computes three output vectors as follows:
+
+out_both (99 bits): For every bit index 0 ≤ i ≤ 98, out_both[i] is 1 if both in[i] and its neighbour to the left in[i+1] are 1. (Since in[99] has no left neighbour, out_both[99] is not required.)
+
+out_any (99 bits): The output is a 99-bit vector indexed 0 to 98. For every bit index 0 ≤ i ≤ 98, out_any[i] is 1 if either in[i] or in[i+1] is 1. Equivalently, out_any[i] = in[i] | in[i+1].
+
+out_different (100 bits): For every bit index i (0 ≤ i ≤ 99) the output is the XOR of in[i] and its neighbour to the left, with wrapping around (i.e. for i = 99 use in[0] as its neighbour).
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<100> in, 
+               ap_uint<99> &out_both, 
+               ap_uint<99> &out_any, 
+               ap_uint<100> &out_different)

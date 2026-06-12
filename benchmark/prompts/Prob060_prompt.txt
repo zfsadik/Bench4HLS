@@ -1,0 +1,11 @@
+Build a four‑bit shift register that also acts as a down counter. The module has the following inputs and output:
+
+shift_ena: When 1, the register shifts left (data is shifted in most‑significant‑bit first) with the new bit coming in at the least‑significant bit.
+count_ena: When 1 (and shift_ena is 0), the current 4‑bit number in the register is decremented.
+data: The serial data input to be shifted in.
+q: A 4‑bit register output.
+
+Note: The design assumes that shift_ena and count_ena are never both active at the same time (if both are 1, either behavior is acceptable).
+
+The top-level function should have the following prototype:
+void TopModule(bool shift_ena, bool count_ena, bool data, ap_uint<4> &q)

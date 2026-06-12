@@ -1,0 +1,4 @@
+Build a module that takes an 8‑bit input vector and outputs an 8‑bit vector with its bit ordering reversed.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<8> in, ap_uint<8>& out)

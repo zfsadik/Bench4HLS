@@ -1,0 +1,4 @@
+Build a circuit that sign‑extends an 8‑bit number to 32 bits. This is done by replicating the sign bit (bit[7]) 24 times to the left of the 8‑bit input. In HLS‑C++, you can perform sign extension automatically by converting a signed 8‑bit number to a signed 32‑bit number. The input is a 8-bit number (in) and the output is a 32-bit number (out).
+
+The top-level function should have the following prototype:
+void TopModule(ap_int<8> in, ap_int<32> &out)

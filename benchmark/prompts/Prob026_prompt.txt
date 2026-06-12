@@ -1,0 +1,4 @@
+Implement a full adder. A full adder adds three 1‑bit inputs (a, b, and carry‑in cin) and produces a 1‑bit sum and a 1‑bit carry‑out (cout).
+
+The top-level function should have the following prototype:
+void TopModule(bool a, bool b, bool cin, bool &cout, bool &sum)

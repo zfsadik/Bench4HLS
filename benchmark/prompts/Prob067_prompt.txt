@@ -1,0 +1,4 @@
+A single-output digital system with four inputs (a,b,c,d) generates a logic-1 when 2, 7, or 15 appears on the inputs, and a logic-0 when 0, 1, 4, 5, 6, 9, 10, 13, or 14 appears. The input conditions for the numbers 3, 8, 11, and 12 never occur in this system. For example, 7 corresponds to a,b,c,d being set to 0,1,1,1, respectively. In this encoding, `a` is the MSB and `d` is the LSB of the 4-bit input. Determine the output out_sop in minimum sum-of-products form, and the output out_pos in minimum product-of-sums form. For the don't-care input conditions (3, 8, 11, 12), out_sop and out_pos may independently assign 0 or 1; the minimum SOP and POS expressions may differ on these inputs.
+
+The top-level function should have the following prototype:
+void TopModule (bool a, bool b, bool c, bool d, bool &out_sop, bool &out_pos)

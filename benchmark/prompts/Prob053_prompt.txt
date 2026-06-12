@@ -1,0 +1,4 @@
+Build a combinational circuit that, given four 8‑bit unsigned inputs (a, b, c, and d), finds and outputs the minimum value. (Unsigned numbers are compared using standard comparison operators.)
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<8> a, ap_uint<8> b, ap_uint<8> c, ap_uint<8> d, ap_uint<8> &min)

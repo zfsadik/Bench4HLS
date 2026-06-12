@@ -1,0 +1,10 @@
+Build a 4‑digit BCD counter. The 16‑bit counter q is partitioned as follows:
+• q[3:0] is the ones digit
+• q[7:4] is the tens digit
+• q[11:8] is the hundreds digit
+• q[15:12] is the thousands digit
+
+For digits [3:1], output a 3‑bit enable signal (ena) that reflects when each upper digit should increment next: ena[0] for the tens digit (ones==9), ena[1] for the hundreds digit (lower two digits==99), ena[2] for the thousands digit (lower three digits==999). Each upper digit increments when its enable condition is met. A synchronous active‑high reset resets the counter to 0. The function is called once per implicit HLS clock cycle; there is no explicit clk parameter.
+
+The top-level function should have the following prototype:
+void TopModule(bool reset, ap_uint<3> &ena, ap_uint<16> &q)

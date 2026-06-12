@@ -1,0 +1,8 @@
+Implement the following circuit. Create two intermediate wires (named arbitrarily) to connect the AND and OR gates together. The circuit is composed of two layers. The first layer has two AND gates:
+ - One AND gate takes inputs a and b.
+ - The other AND gate takes inputs c and d.
+
+The second layer has an OR gate that combines the outputs of these two AND gates, driving the output 'out'. Additionally, an inverted output 'out_n' is produced.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<1> a, ap_uint<1> b, ap_uint<1> c, ap_uint<1> d, ap_uint<1> &out, ap_uint<1> &out_n)

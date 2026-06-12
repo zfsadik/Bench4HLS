@@ -1,0 +1,4 @@
+Implement a circuit that reverses a 100‑bit input vector. The module takes a 100‑bit input (ap_uint<100>) and produces a 100‑bit output where the bit order is reversed. 
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<100> in, ap_uint<100> &out)

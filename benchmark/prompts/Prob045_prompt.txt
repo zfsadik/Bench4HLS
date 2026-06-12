@@ -1,0 +1,4 @@
+Create 8 D flip-flops with active high synchronous reset. When reset is high, output q is synchronously cleared to 0 (modeled implicitly per HLS pipeline semantics where each function invocation represents one rising clock edge). Otherwise, q captures d each clock cycle. The input is a 8‑bit data input (d). The output is an 8‑bit vector q.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<8> d, bool reset, ap_uint<8> &q)

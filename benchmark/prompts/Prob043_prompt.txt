@@ -1,0 +1,4 @@
+For each bit in an 8-bit vector, detect when the input signal changes from one clock cycle to the next (detect any edge). Each output bit is set in the cycle that the transition is detected: it is the XOR of the current input bit and the registered input bit from the previous clock cycle (i.e., output is combinationally derived from current in XOR registered previous-cycle in, so it appears one cycle after the edge occurs).
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<8> in, ap_uint<8> &anyedge)

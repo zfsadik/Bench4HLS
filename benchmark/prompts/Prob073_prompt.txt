@@ -1,0 +1,11 @@
+Create a 6-to-1 multiplexer.  The multiplexer has one 3‑bit select input (sel) and six 4‑bit data inputs (data0 through data5). When sel is 0–5, the corresponding data input is routed to the output. For any other value of sel, the output is 0. The output is a 4‑bit value (out).
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<3> sel,
+               ap_uint<4> data0,
+               ap_uint<4> data1,
+               ap_uint<4> data2,
+               ap_uint<4> data3,
+               ap_uint<4> data4,
+               ap_uint<4> data5,
+               ap_uint<4> &out)

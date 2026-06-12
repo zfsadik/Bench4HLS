@@ -1,0 +1,4 @@
+Implement a register with clock enable. When ena is high, the register captures the value of d on the rising clock edge. When ena is low, the register holds its previous value. The circuit has two 1-bit inputs: d (data) and ena (enable).
+
+The top-level function should have the following prototype:
+void TopModule(bool d, bool ena, bool &q)

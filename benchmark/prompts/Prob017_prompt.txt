@@ -1,0 +1,4 @@
+Implement a 2‑1 multiplexer. When sel = 0, choose a; when sel = 1, choose b.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<100> a, ap_uint<100> b, bool sel, ap_uint<100> &out)

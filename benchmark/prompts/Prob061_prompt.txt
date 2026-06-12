@@ -1,0 +1,7 @@
+Build a combinational circuit that, given six 5‑bit input vectors (a, b, c, d, e, and f), produces four 8‑bit output vectors (w, x, y, and z). The output is formed by concatenating the six 5‑bit inputs (in the order a, b, c, d, e, f) followed by the 2-bit constant 2’b11 (two 1-bits) in the least‑significant bit positions.
+Then, the 32‑bit result is split into four 8‑bit outputs in the order: w, x, y, z.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<5> a, ap_uint<5> b, ap_uint<5> c, 
+               ap_uint<5> d, ap_uint<5> e, ap_uint<5> f,
+               ap_uint<8> &w, ap_uint<8> &x, ap_uint<8> &y, ap_uint<8> &z);

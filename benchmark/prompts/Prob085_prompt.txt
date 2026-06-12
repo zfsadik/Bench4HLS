@@ -1,0 +1,9 @@
+Implement a Mealy machine 2's complementer in HLS‑C++ using one‑hot encoding and a synchronous active‑high reset. The state machine has two states, A and B; an input x and an output z. On a rising clock edge, if reset is asserted, the state returns to A. Otherwise, the state updates as follows:
+
+  A --x=0 (z=0)--> A
+  A --x=1 (z=1)--> B
+  B --x=0 (z=1)--> B
+  B --x=1 (z=0)--> B
+
+The top-level function should have the following prototype:
+void TopModule(bool reset, bool x, bool &z)

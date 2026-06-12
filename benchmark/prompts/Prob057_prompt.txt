@@ -1,0 +1,8 @@
+Build a sequential circuit that implements a 4‑bit shift register using four D flip‑flops with an active‑low synchronous reset. The design has two 1‑bit inputs and one 1‑bit output:
+
+resetn: active‑low synchronous reset; when low at a rising edge, the register is reset to 0
+in: serial data input
+out: output taken from the most‑significant bit (bit 3) of the shift register
+
+The top-level function should have the following prototype:
+void TopModule(bool resetn, bool in, bool &out)

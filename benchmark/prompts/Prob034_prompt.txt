@@ -1,0 +1,4 @@
+Build a decade counter that counts from 1 through 10. The counter has a synchronous reset input (reset). On every rising clock edge, if reset is high or the counter value is 10, the counter is reset to 1; otherwise, it increments by 1. The counter output is a 4‑bit number q.
+
+The top-level function should have the following prototype:
+void TopModule(bool reset, ap_uint<4> &q)

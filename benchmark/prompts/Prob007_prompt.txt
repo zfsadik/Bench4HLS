@@ -1,0 +1,4 @@
+Create a module with one input and one output that behaves like a wire.
+
+The top-level function should have the following prototype:
+void TopModule(bool in, bool &out)

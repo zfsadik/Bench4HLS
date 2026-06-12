@@ -1,0 +1,27 @@
+Consider the state machine shown below:
+
+  A (0) --1--> B
+  A (0) --0--> A
+  B (0) --1--> C
+  B (0) --0--> D
+  C (0) --1--> E
+  C (0) --0--> D
+  D (0) --1--> F
+  D (0) --0--> A
+  E (1) --1--> E
+  E (1) --0--> D
+  F (1) --1--> C
+  F (1) --0--> D
+
+Implement a combinational circuit in HLS‑C++ that accepts:
+
+A 6‑bit input y (one‑hot encoded with state assignment:
+A = 000001, B = 000010, C = 000100, D = 001000, E = 010000, F = 100000)
+
+A 1‑bit input w and generates two outputs Y1 and Y3 as follows:
+
+Y1 is the input of state flip-flop y[1]
+Y3 is the input of state flip-flop y[3]
+
+Your top‑level function should be called TopModule and have this prototype:
+void TopModule(ap_uint<6> y, ap_uint<1> w, ap_uint<1> &Y1, ap_uint<1> &Y3)

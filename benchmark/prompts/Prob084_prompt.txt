@@ -1,0 +1,19 @@
+Build a combinational circuit in HLS C++ with two 1‑bit inputs, a and b, and seven outputs defined as follows:
+
+	1. out_and: a AND b
+	2. out_or: a OR b
+	3. out_xor: a XOR b
+	4. out_nand: NOT (a AND b)
+	5. out_nor: NOT (a OR b)
+	6. out_xnor: a XNOR b
+	7. out_anotb: a AND (NOT b)
+
+The top-level function should have the following prototype:	
+void TopModule(bool a, bool b,
+               bool &out_and,
+               bool &out_or,
+               bool &out_xor,
+               bool &out_nand,
+               bool &out_nor,
+               bool &out_xnor,
+               bool &out_anotb)

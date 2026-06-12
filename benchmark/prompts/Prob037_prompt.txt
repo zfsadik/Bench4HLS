@@ -1,0 +1,4 @@
+Build a 4‑bit binary counter that counts from 0 through 15 (with a period of 16 cycles). The counter has a synchronous, active‑high reset input (reset). The counter output is a 4‑bit value q.
+
+The top-level function should have the following prototype:
+void TopModule(bool reset, ap_uint<4> &q)

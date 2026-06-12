@@ -1,0 +1,13 @@
+The following is the state transition table for a Moore state machine with one input, one output, and four states. Use the following one-hot state encoding: A=4'b0001, B=4'b0010, C=4'b0100, D=4'b1000. Derive state transition and output logic equations by inspection assuming a one-hot encoding. Implement only the state transition logic and output logic (the combinational logic portion) for this state machine.
+
+  State | Next state in=0, Next state in=1 | Output
+  A     | A, B                             | 0
+  B     | C, B                             | 0
+  C     | A, D                             | 0
+  D     | C, B                             | 1
+
+Inputs: in (1-bit), state (4‑bit one‑hot encoded current state)
+Outputs: out (1‑bit), next_state (4‑bit one‑hot encoded next state)
+
+The top-level function should have the following prototype:
+void TopModule(bool in, ap_uint<4> state, ap_uint<4> &next_state, bool &out)

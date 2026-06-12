@@ -1,0 +1,4 @@
+Implement a module that mimics the functionality of the 7420 chip from the 7400‑series. This chip has two independent 4‑input NAND gates. The module has eight 1‑bit inputs and two 1‑bit outputs. The first 4‑input NAND gate has inputs p1a, p1b, p1c, and p1d; its output, p1y, should be the NAND of those inputs. The second 4‑input NAND gate has inputs p2a, p2b, p2c, and p2d; its output, p2y, is the NAND of those inputs.
+
+The top-level function should have the following prototype:
+void TopModule(bool p1a, bool p1b, bool p1c, bool p1d, bool &p1y, bool p2a, bool p2b, bool p2c, bool p2d, bool &p2y)

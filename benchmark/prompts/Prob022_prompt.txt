@@ -1,0 +1,4 @@
+Implement a one‑bit wide, 2‑to‑1 multiplexer. When sel = 0, choose input a; when sel = 1, choose input b.
+
+The top-level function should have the following prototype:
+void TopModule(bool a, bool b, bool sel, bool &out)

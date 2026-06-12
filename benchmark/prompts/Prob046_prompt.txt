@@ -1,0 +1,4 @@
+Implement a simple D flip‑flop with an active‑high synchronous reset. On every rising edge of clk, if r is high then the flip‑flop is reset (output q becomes 0); otherwise, q is updated to the input d.
+
+The top-level function should have the following prototype:
+void TopModule(bool d, bool r, bool &q)

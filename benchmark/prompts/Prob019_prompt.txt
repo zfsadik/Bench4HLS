@@ -1,0 +1,4 @@
+Implement a circuit where two inputs, in1 and in2, are fed to an AND gate—but the in2 input is inverted (bubble).
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<1> in1, ap_uint<1> in2, ap_uint<1> &out)

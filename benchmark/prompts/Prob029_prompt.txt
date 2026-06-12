@@ -1,0 +1,4 @@
+Build a population count circuit for a 255‑bit input vector. The circuit counts the number of '1's in the input and outputs the count as an 8‑bit value.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<255> in, ap_uint<8> &out)

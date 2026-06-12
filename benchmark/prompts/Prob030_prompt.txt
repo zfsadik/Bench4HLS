@@ -1,0 +1,4 @@
+Implement a D flip-flop. The circuit has one 1-bit input, d (data), and one 1-bit output, q. On each rising clock edge, q captures the value of d.
+
+The top-level function should have the following prototype:
+void TopModule(bool d, bool &q)

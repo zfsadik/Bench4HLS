@@ -1,0 +1,4 @@
+Create a 1‑bit wide, 256‑to‑1 multiplexer. The 256 inputs are packed into a single 256‑bit input vector. When sel = 0, select bit 0 of in; when sel = 1, select bit 1; …; when sel = 255, select bit 255.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<256> in, ap_uint<8> sel, bool &out)

@@ -1,0 +1,9 @@
+Build a combinational circuit with three 1‑bit inputs (a, b, and c) that produces four 1‑bit outputs (w, x, y and z) with the following direct connections:
+
+w is connected to a
+x is connected to b
+y is connected to b
+z is connected to c
+
+The top-level function should have the following prototype:
+void TopModule(bool a, bool b, bool c, bool &w, bool &x, bool &y, bool &z)

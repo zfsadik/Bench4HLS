@@ -1,0 +1,4 @@
+Implement a circuit with three 1‑bit inputs (in1, in2, and in3). The circuit first computes the XNOR of in1 and in2 and then XORs that result with in3.
+
+The top-level function should have the following prototype:
+void TopModule(bool in1, bool in2, bool in3, bool &out)

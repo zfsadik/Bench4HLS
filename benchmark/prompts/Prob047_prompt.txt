@@ -1,0 +1,7 @@
+Implement a positive edge triggered D flip-flop with a synchronous reset ("sr"). The circuit has two 1-bit inputs:
+
+d: Data input
+sr: Synchronous reset (active high); when asserted, the output is cleared to 0 on the rising clock edge
+
+The top-level function should have the following prototype:
+void TopModule(bool d, bool sr, bool &q);

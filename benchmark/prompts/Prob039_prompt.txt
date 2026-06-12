@@ -1,0 +1,9 @@
+Build a circuit that implements eight D flip‑flops with an active‑high synchronous reset. In HLS, each function call models one clock cycle. The module has two inputs:
+
+d (an 8‑bit data input)
+reset (synchronous, active‑high reset)
+
+The output is an 8‑bit vector q.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<8> d, bool reset, ap_uint<8> &q)

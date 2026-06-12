@@ -1,0 +1,6 @@
+Build a priority encoder for 8-bit inputs. Given an 8‑bit input vector (in), the function finds the first (least significant) bit that is 1 and outputs (pos) its index (0–7). If no bit is 1, the output is 0.
+
+For example, for input 0x90, the first high bit (starting from LSB) is bit[4], so the output should be 4.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<8> in, ap_uint<3> &pos)

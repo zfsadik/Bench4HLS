@@ -1,0 +1,4 @@
+Create a module that implements a bitwise NOT gate over an 8-bit word.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<8> in, ap_uint<8> &out)

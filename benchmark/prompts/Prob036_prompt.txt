@@ -1,0 +1,4 @@
+Build a counter that counts from 0 to 999 (inclusive) with a period of 1000 cycles. The counter has a synchronous, active-high reset input (reset). The counter output is a 10‑bit number q.
+
+The top-level function should have the following prototype:
+void TopModule(bool reset, ap_uint<10> &q);

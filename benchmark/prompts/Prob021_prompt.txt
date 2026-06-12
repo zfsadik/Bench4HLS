@@ -1,0 +1,4 @@
+Create a 4‑bit wide, 256‑to‑1 multiplexer. The 256 4‑bit inputs are all packed into a single 1024‑bit input vector. When sel = 0, the multiplexer selects bits in[3:0]; when sel = 1, it selects bits in[7:4]; when sel = 2, it selects bits in[11:8]; and so on.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<1024> in, ap_uint<8> sel, ap_uint<4> &out)

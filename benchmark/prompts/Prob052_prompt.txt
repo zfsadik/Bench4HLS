@@ -1,0 +1,4 @@
+Build a sequential circuit that detects, for each bit of an 8‑bit vector, when the input changes from 0 in one clock cycle to 1 in the next (i.e. a positive‑edge detection for each bit). The output is an 8‑bit vector, where each bit is set (1) in the same cycle that the 0 to 1 transition is detected (i.e., when the current input bit is 1 and the previous cycle's input bit was 0).
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<8> in, ap_uint<8> &pedge)

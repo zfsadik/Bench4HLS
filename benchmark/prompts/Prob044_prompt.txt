@@ -1,0 +1,4 @@
+Build a circuit that implements eight D flip‑flops with an active‑high synchronous reset that resets the output to 0x34. All flip‑flops are triggered on the rising clock edge. In other words, on every rising clock edge, if reset is high then the output q (an 8‑bit vector) is set to 0x34; otherwise, q is updated with the 8‑bit input d.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<8> d, bool reset, ap_uint<8> &q)

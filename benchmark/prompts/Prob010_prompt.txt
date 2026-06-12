@@ -1,0 +1,4 @@
+Implement the boolean function z = (x^y) & x.
+
+The top-level function should have the following prototype:
+void TopModule(bool x, bool y, bool &z)

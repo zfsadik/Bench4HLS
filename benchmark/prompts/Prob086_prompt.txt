@@ -1,0 +1,14 @@
+Design a one‑input, one‑output serial 2's complementer Moore state machine using HLS‑C++. The input x is provided one bit per clock cycle, beginning with the least‐significant bit of the number; the output z is the 2's complement of the input number.
+
+The machine uses a synchronous active-high reset. Reset takes effect on the rising clock edge; conversion begins the cycle after reset is deasserted and stops the cycle reset is asserted.
+
+Implement the state machine as a Moore machine with three states (A, B, C) encoded as follows:
+
+State A (code 0): On a rising edge, if x is 1 then transition to state C; if x is 0 remain in state A.
+State B (code 1): On a rising edge, if x is 1 remain in state B; if x is 0 transition to state C.
+State C (code 2): On a rising edge, if x is 1 transition to state B; if x is 0 remain in state C.
+
+The output z is defined as: z = 1 when the state is C, and 0 otherwise.
+
+The top-level function should have the following prototype:
+void TopModule(bool reset, bool x, bool &z)

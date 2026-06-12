@@ -1,0 +1,4 @@
+A dual-edge triggered flip-flop captures its input on both edges of the clock. FPGAs do not have native dual-edge triggered flip-flops. Implement a synthesizable version using a single register (qp) that captures the input d on the rising clock edge. The output q reflects the current register value.
+
+The top-level function should have the following prototype:
+void TopModule(bool d, bool &q)

@@ -1,0 +1,5 @@
+Implement a module that implements a NOR gate.
+The module has two inputs, a and b, and one output out.
+
+The top-level function should have the following prototype:
+void TopModule(bool a, bool b, bool &out)

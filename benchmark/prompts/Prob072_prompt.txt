@@ -1,0 +1,4 @@
+Build a two-bit saturating counter. The counter increments (up to a maximum of 3) when train_valid = 1 and train_taken = 1. It decrements (down to a minimum of 0) when train_valid = 1 and train_taken = 0. When not training (train_valid = 0), the counter keeps its value unchanged. areset is a synchronous reset (active high) that resets the counter to weakly not-taken (2'b01) on the rising clock edge. Output state[1:0] is the two-bit counter value.
+
+The top-level function should have the following prototype:
+void TopModule(bool areset, bool train_valid, bool train_taken, ap_uint<2> &state)

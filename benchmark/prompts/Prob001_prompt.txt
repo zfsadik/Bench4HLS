@@ -1,0 +1,4 @@
+Build a circuit that always outputs a LOW.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<1>& zero)

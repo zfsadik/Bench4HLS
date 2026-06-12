@@ -1,0 +1,4 @@
+A "population count" circuit counts the number of '1's in an input vector. Build a population count circuit for a 3‑bit input vector.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<3> in, ap_uint<2>& out)

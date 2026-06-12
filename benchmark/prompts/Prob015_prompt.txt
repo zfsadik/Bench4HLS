@@ -1,0 +1,4 @@
+Build a combinational circuit that splits an input half‑word (16 bits, [15:0]) into its upper byte ([15:8]) and lower byte ([7:0]).
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<16> in, ap_uint<8> &out_hi, ap_uint<8> &out_lo)

@@ -1,0 +1,14 @@
+Create a combinational circuit that implements the truth table.
+
+  x3 | x2 | x1 | f
+  0  | 0  | 0  | 0
+  0  | 0  | 1  | 0
+  0  | 1  | 0  | 1
+  0  | 1  | 1  | 1
+  1  | 0  | 0  | 0
+  1  | 0  | 1  | 1
+  1  | 1  | 0  | 0
+  1  | 1  | 1  | 1
+
+The top-level function should have the following prototype:  
+void TopModule(bool x3, bool x2, bool x1, bool &f)

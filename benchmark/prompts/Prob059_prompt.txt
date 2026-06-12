@@ -1,0 +1,7 @@
+Find the bug and fix this 8-bit wide 2-to-1 mux design for HLS.
+Mux behaviour: If sel is 1, then output a; otherwise, output b.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<8> a, ap_uint<8> b, bool sel, ap_uint<8> &out) {
+	out = (((ap_uint<8>)(!sel)) & a) | (((ap_uint<8>)(sel)) & b);
+}

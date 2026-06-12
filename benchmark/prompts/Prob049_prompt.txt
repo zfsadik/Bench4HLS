@@ -1,0 +1,8 @@
+Build a combinational circuit with a 4‑bit input (in) that produces three outputs:
+
+out_and: the AND reduction of the 4‑bit vector.
+out_or: the OR reduction of the 4‑bit vector.
+out_xor: the XOR reduction of the 4‑bit vector.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<4> in, ap_uint<1> &out_and, ap_uint<1> &out_or, ap_uint<1> &out_xor)

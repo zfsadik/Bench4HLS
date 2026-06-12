@@ -1,0 +1,6 @@
+Implement a circuit that, for each bit in a 32‑bit vector, "captures" when the input changes from 1 (in one clock cycle) to 0 in the next cycle. Once a bit is captured, that bit of the output remains 1 until the circuit is reset. The reset is active‑high and synchronous.
+
+The previous-input register (d_last) is updated unconditionally every cycle with the current value of `in`, regardless of whether reset is asserted. Reset only clears the captured-output register, not d_last.
+
+The top-level function should have the following prototype:
+void TopModule(bool reset, ap_uint<32> in, ap_uint<32> &out);

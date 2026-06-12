@@ -1,0 +1,16 @@
+Implement one stage of an n‑bit shift register. This stage has the following inputs and output:
+
+w: The serial data input for this stage (from the previous stage)
+R: The value to load when a load condition is true
+E: Enable input for shifting
+L: Load signal; when high, the stage loads the value R
+Q: The output of this stage (i.e. the stored bit)
+
+Behavior:
+On every rising edge of clk:
+If L is asserted, load R into the flip‑flop.
+Else if E is asserted, shift in w.
+Otherwise, hold the current state.
+
+The top-level function should have the following prototype:
+void TopModule(bool w, bool R, bool E, bool L, bool &Q)

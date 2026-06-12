@@ -1,0 +1,4 @@
+Create a circuit that has two 2‑bit inputs A and B and produces a 1‑bit output z. The value of z should be 1 if A = B, otherwise z should be 0.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<2> A, ap_uint<2> B, bool &z)

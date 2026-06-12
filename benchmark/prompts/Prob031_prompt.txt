@@ -1,0 +1,11 @@
+Implement a circuit that has one 3‑bit input, then outputs the same vector and also splits it into three separate 1‑bit outputs. In other words, the circuit takes a 3‑bit vector vec and produces:
+
+A 3‑bit output outv (which is the same as vec), and
+
+Three 1‑bit outputs o2, o1, and o0 such that:
+o2 is connected to bit position 2 of vec,
+o1 is connected to bit position 1 of vec, and
+o0 is connected to bit position 0 of vec.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<3> vec, ap_uint<3> &outv, bool &o2, bool &o1, bool &o0)

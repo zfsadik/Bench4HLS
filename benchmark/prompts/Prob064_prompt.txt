@@ -1,0 +1,4 @@
+Build a decade counter that counts from 0 through 9 (with a period of 10). The counter is updated only if the "slowena" input is true. The reset input is active-high and resets the counter to 0; reset takes priority over slowena. If slowena is true (and reset is false), the counter increments by 1 (wrapping from 9 back to 0); if slowena is false, the counter holds its value. The output is a 4-bit vector q. There is no explicit clock port; the HLS tool infers the clock.
+
+The top-level function should have the following prototype:
+void TopModule(bool slowena, bool reset, ap_uint<4> &q)

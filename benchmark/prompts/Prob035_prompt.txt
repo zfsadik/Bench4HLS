@@ -1,0 +1,10 @@
+Implement a circuit to control a cellphone’s ringer and vibration motor. The circuit has two inputs:
+ring: indicates an incoming call (when high, the phone should ring)
+vibrate_mode: indicates the phone is in vibrate mode
+
+The outputs are:
+ringer: should be high if the phone is ringing and not in vibrate mode
+motor: should be high if the phone is ringing and in vibrate mode
+
+The top-level function should have the following prototype:
+void TopModule(bool ring, bool vibrate_mode, bool &ringer, bool &motor)

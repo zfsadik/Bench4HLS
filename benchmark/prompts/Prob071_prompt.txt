@@ -1,0 +1,11 @@
+Create a finite state machine using three D flip-flops. Assume that the flip-flops are initially reset to zero before the machine begins.
+
+The input x feeds three two-input gates:
+XOR:  first input is x and the second is the corresponding flip-flop's output.
+AND:  first input is x and the second is the complemented output of its flip-flop.
+OR:   first input is x and the second is the complemented output of its flip-flop.
+
+The outputs of these gates are captured by three D flip-flops on the positive edge of clk. The outputs of the flip-flops all go to a three-input NOR, whose output is z.
+
+The top-level function should have the following prototype:
+void TopModule(bool x, bool &z)

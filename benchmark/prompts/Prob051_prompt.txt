@@ -1,0 +1,8 @@
+Implement a D flip-flop with XOR feedback. The circuit is defined as follows:
+
+The flip-flop is positive-edge triggered by clk.
+The flip-flop's input is computed as the XOR of the external input in and the flip-flop's previous output. The output is q.
+There is no reset; the initial value of the flip-flop is 0.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<1> in, ap_uint<1> &q)

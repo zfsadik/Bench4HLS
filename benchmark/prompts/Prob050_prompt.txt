@@ -1,0 +1,8 @@
+Build a combinational circuit with 100 inputs (packed into a 100‑bit vector). The circuit produces three outputs:
+
+out_and: the output of a 100‑input AND gate.
+out_or: the output of a 100‑input OR gate.
+out_xor: the output of a 100‑input XOR gate.
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<100> in, bool &out_and, bool &out_or, bool &out_xor)

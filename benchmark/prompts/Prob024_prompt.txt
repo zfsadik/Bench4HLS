@@ -1,0 +1,4 @@
+Implement a half adder. A half adder adds two 1‑bit inputs (with no carry‑in) and produces a sum and a carry‑out.
+
+The top-level function should have the following prototype:
+void TopModule(bool a, bool b, bool &sum, bool &cout)

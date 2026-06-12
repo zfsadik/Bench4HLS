@@ -1,0 +1,10 @@
+Build a circuit that has two 3‑bit inputs that computes:
+
+out_or_bitwise: the bitwise‑OR of the two 3‑bit vectors.
+out_or_logical: the logical‑OR of the two vectors (i.e. true if either vector is nonzero).
+out_not: a 6‑bit output formed by concatenating the bitwise inverse of b (placed in bits [5:3]) with the bitwise inverse of a (placed in bits [2:0]).
+
+The top-level function should have the following prototype:
+void TopModule(ap_uint<3> a, ap_uint<3> b, 
+               ap_uint<3> &out_or_bitwise, bool &out_or_logical, 
+               ap_uint<6> &out_not)
