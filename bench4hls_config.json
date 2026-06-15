@@ -17,7 +17,7 @@
   },
   "parallel_workers": 16,
   "xilinx": {
-    "vitis_bin": "/home/zafir/Vivado_Vitis/2025.2.1/Vitis/bin/unwrapped/lnx64.o/vitis_hls",
-    "vivado_bin": "/home/zafir/Vivado_Vitis/2025.2.1/Vivado/bin/vivado"
+    "vitis_bin": "/path to vivado installation dir/2025.2.1/Vitis/bin/unwrapped/lnx64.o/vitis_hls",
+    "vivado_bin": "/path to vivado installation dir/2025.2.1/Vivado/bin/vivado"
   }
 }
